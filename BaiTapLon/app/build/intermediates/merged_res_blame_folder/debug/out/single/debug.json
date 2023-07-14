@@ -1,0 +1,126 @@
+[
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\drawable_radius.xml.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\drawable\\radius.xml"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\font_arimo_italic.ttf.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\font\\arimo_italic.ttf"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.baitaplon.app-merged_res-28:/layout_activity_splash_screen.xml.flat",
+        "source": "com.example.baitaplon.app-main-30:/layout/activity_splash_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\drawable_background.jpg.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\drawable\\background.jpg"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\drawable_baseline_phone_24.xml.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\drawable\\baseline_phone_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\drawable_baseline_email_24.xml.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\drawable\\baseline_email_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\drawable_baseline_account_circle_24.xml.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\drawable\\baseline_account_circle_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\drawable_baseline_menu_24.xml.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\drawable\\baseline_menu_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\drawable_baseline_lock_24.xml.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\drawable\\baseline_lock_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\drawable_logo.jpg.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\drawable\\logo.jpg"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\layout_activity_splash_screen.xml.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\layout\\activity_splash_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\drawable_bg1.jpg.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\drawable\\bg1.jpg"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-merged_res-28:\\layout_activity_index.xml.flat",
+        "source": "C:\\Users\\WIN10\\.gradle\\daemon\\8.0\\com.example.baitaplon.app-main-30:\\layout\\activity_index.xml"
+    }
+]
