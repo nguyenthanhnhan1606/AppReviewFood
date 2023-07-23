@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.QuanAnFragment">
+
+    <TextView
+        android:id="@+id/hightlight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#175A7E"
+        android:text="Các quán ăn nổi bật"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+    <!--<LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/hightlight">
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:divider = "#000"
+            android:dividerHeight = "1dp"
+            tools:ignore="InvalidId" />
+    </LinearLayout>-->
+
+</RelativeLayout>

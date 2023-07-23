@@ -3,89 +3,85 @@ package com.example.baitaplon;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.baitaplon.db.UserDataSource;
+import com.example.baitaplon.database.SQLiteHelper;
+import com.example.baitaplon.database.UserDataSource;
 
 public class Register extends AppCompatActivity {
+    EditText hoTen, userName, passWord, rePass, eMail, SDT;
+    Button reBtn;
 
-    EditText ho, ten, user, pass, email, sdt, confirm;
-    Button summit;
 
-    UserDataSource db;
+    UserDataSource userDataSource;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        hoTen = (EditText) findViewById(R.id.textTen);
+        userName = (EditText) findViewById(R.id.reUser);
+        passWord = (EditText) findViewById(R.id.textPass);
+        rePass = (EditText) findViewById(R.id.rePass);
+        eMail = (EditText) findViewById(R.id.reEmail);
+        SDT = (EditText) findViewById(R.id.rePhone);
+        reBtn = (Button) findViewById(R.id.summitbtn);
 
 
-        ten = (EditText) findViewById(R.id.textTen);
-        user = (EditText) findViewById(R.id.reUser);
-        pass = (EditText) findViewById(R.id.textPass);
-        confirm = (EditText) findViewById(R.id.rePass);
-        email = (EditText) findViewById(R.id.reEmail);
-        sdt = (EditText) findViewById(R.id.rePhone);
+        userDataSource = new UserDataSource(this);
+        userDataSource.open();
 
-        summit = (Button) findViewById(R.id.summitbtn);
-
-        db = new UserDataSource(this);
-        db.open();
-
-
-        summit.setOnClickListener(new View.OnClickListener() {
+        reBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String hoTen = ten.getText().toString();
-                String userName = user.getText().toString();
-                String passWord = pass.getText().toString();
-                String conf = confirm.getText().toString();
-                String mail = email.getText().toString();
-                String phone = sdt.getText().toString();
+                String hoten = hoTen.getText().toString();
+                String username = userName.getText().toString();
+                String password = passWord.getText().toString();
+                String repass = rePass.getText().toString();
+                String email = eMail.getText().toString();
+                String sdt = SDT.getText().toString();
                 String avatar = " ";
-                int user_role = 0;
-                boolean active = true;
+                String user_role = "user";
 
-                if (userName.equals("") || passWord.equals("") || conf.equals("")){
-                    Toast.makeText(Register.this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                if (username.equals(" ") || password.equals(" ") || repass.equals(" ")){
+                    Toast.makeText(getApplicationContext(), "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                 }else{
-                    if (passWord.equals(conf)){
-                        Boolean checkUser = db.checkUser(userName);
+                    if (password.equals(repass)){
+                        boolean checkUser = userDataSource.checkUserName(username);
                         if (checkUser == false){
-                            Boolean check = db.insertUser(hoTen, userName, passWord, mail, phone,avatar,user_role,active);
-                            if (check == true) {
-                                Toast.makeText(Register.this, "Tạo tài khoản thành công", Toast.LENGTH_SHORT).show();
+                            boolean insert = userDataSource.insertUser(hoten,username,password,email,sdt,avatar,true,user_role);
+                            if (insert == true){
+                                Toast.makeText(getApplicationContext(),"Tạo tài khoàn thành công", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getApplicationContext(), Login.class);
                                 startActivity(intent);
-                            }else
-                                Toast.makeText(Register.this, "Tài khoản không tạo được", Toast.LENGTH_SHORT).show();
+                            }else{
+                                Toast.makeText(getApplicationContext(), "Tạo tài khoản thất bại", Toast.LENGTH_SHORT).show();
+                            }
                         }else{
-                            Toast.makeText(Register.this, "Tài khoản đã tồn tại", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Tên người dùng đã được sử dụng", Toast.LENGTH_SHORT).show();
                         }
                     }else {
-                        Toast.makeText(Register.this, "Mật khẩu không trùng", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Mật khẩu không trùng", Toast.LENGTH_SHORT).show();
                     }
                 }
-
-
             }
         });
     }
 
     @Override
-    protected void onResume(){
-        db.open();
+    protected void onResume() {
+        userDataSource.open();
         super.onResume();
     }
 
     @Override
-    protected  void onPause(){
-        db.close();
+    protected void onPause() {
+        userDataSource.close();
         super.onPause();
     }
-
 }

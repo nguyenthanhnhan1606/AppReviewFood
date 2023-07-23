@@ -38,51 +38,62 @@
             android:layout_alignParentRight="true"
             android:layout_centerInParent="true"
             android:layout_marginRight="4dp"
-            android:background="@drawable/baseline_account_circle_24"
-            />
+            android:background="@drawable/baseline_account_circle_24" />
     </RelativeLayout>
 
-    <LinearLayout
-        android:id="@+id/liLayout"
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/reLayout"
-        android:orientation="horizontal"
-        tools:ignore="InvalidId">
+        android:layout_below="@+id/reLayout">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#8A8585"
-            android:backgroundTint="#8A8585"
+            android:text="Danh sách quán ăn" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Xem lịch sử" />
 
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="202dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/material_dynamic_neutral70" />
-    </LinearLayout>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tìm theo danh mục" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabLayout">
+    </androidx.viewpager2.widget.ViewPager2>
+
 
     <TextView
         android:id="@+id/hightlight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/liLayout"
+        android:layout_below="@id/tabLayout"
         android:background="#175A7E"
         android:text="Các quán ăn nổi bật"
         android:textColor="@color/white"
         android:textSize="24sp" />
-
-    <ListView
-        android:id="@+id/list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/hightlight"
-        tools:ignore="InvalidId" />
-
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/hightlight">
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:divider = "#000"
+            android:dividerHeight = "1dp"
+            tools:ignore="InvalidId" />
+    </LinearLayout>
 
 </RelativeLayout>
