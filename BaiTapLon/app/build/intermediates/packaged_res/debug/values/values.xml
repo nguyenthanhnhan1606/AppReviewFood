@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
-    <color name="lavender">#8692f7</color>
+    <color name="blue">#0000FF</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="green">#00FF00</color>
+    <color name="indigo">#4B0082</color>
+    <color name="orange">#FF7F00</color>
+    <color name="red">#FF0000</color>
+    <color name="violet">#9400D3</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#FFFF00</color>
     <string name="app_name">BaiTapLon</string>
-    <string name="close_nav">Close Navigation Drawer</string>
-    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <style name="Base.Theme.BaiTapLon" parent="Theme.Material3.DayNight.NoActionBar">
         
-        <item name="colorPrimaryVariant">@color/lavender</item>
+        
     </style>
     <style name="Theme.BaiTapLon" parent="Base.Theme.BaiTapLon"/>
     <style name="Theme.SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar"/>

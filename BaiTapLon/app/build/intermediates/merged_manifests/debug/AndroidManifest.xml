@@ -28,7 +28,10 @@
         android:testOnly="true"
         android:theme="@style/Theme.BaiTapLon" >
         <activity
-            android:name="com.example.baitaplon.SplashScreen"
+            android:name="com.example.baitaplon.Details"
+            android:exported="false" />
+        <activity
+            android:name="com.example.baitaplon.Splash"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,8 +47,7 @@
             android:exported="false" />
         <activity
             android:name="com.example.baitaplon.Login"
-            android:exported="false" >
-        </activity>
+            android:exported="false" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
