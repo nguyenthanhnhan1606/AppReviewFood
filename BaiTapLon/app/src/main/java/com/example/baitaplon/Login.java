@@ -34,7 +34,7 @@ public class Login extends AppCompatActivity {
 
         userDataSource = new UserDataSource(this);
         userDataSource.open();
-//
+
 //        db = new SQLiteHelper(this);
 //        db.close();
 //        db.delAll(getApplicationContext());

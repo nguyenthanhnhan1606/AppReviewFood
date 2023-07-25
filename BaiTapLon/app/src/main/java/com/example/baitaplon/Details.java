@@ -22,13 +22,11 @@ public class Details extends AppCompatActivity {
             String name = intent.getStringExtra("tenquan");
             String diadiem = intent.getStringExtra("diadiem");
             int hinhanh = intent.getIntExtra("hinhanh", R.drawable.phencoffee);
-            String danhgia = intent.getStringExtra("danhgia");
-            double score = Double.parseDouble(danhgia);
+
 
             binding.txtTenQuan.setText(name);
             binding.txtDes.setText(diadiem);
             binding.img.setImageResource(hinhanh);
-            binding.txtDanhGia.setText((int) score);
         }
     }
 }
