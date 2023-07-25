@@ -1,5 +1,6 @@
 package com.example.baitaplon;
 
+
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
@@ -18,7 +19,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import com.example.baitaplon.database.LoaiQuan;
 import com.example.baitaplon.database.LoaiQuanDataSource;
 import com.example.baitaplon.database.QuanAn;
@@ -26,7 +26,6 @@ import com.example.baitaplon.database.QuanAnDataSource;
 import com.example.baitaplon.database.SQLiteHelper;
 import com.example.baitaplon.databinding.ActivityIndexBinding;
 import com.google.android.material.tabs.TabLayout;
-
 import java.util.ArrayList;
 
 
@@ -38,13 +37,12 @@ public class Index extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     ViewPageAdapter viewPageAdapter;
-
     ActivityIndexBinding binding;
-
     private  LoaiQuanDataSource lq;
     private QuanAnDataSource qa;
     private LoaiQuan loaiQuan;
     private QuanAn quanAn;
+
 
 
 
@@ -58,12 +56,15 @@ public class Index extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         listView = (ListView) findViewById(R.id.list);
+
         textView = (TextView) findViewById(R.id.hightlight);
         actionBar = getSupportActionBar();
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         viewPager2 = (ViewPager2) findViewById(R.id.viewpager);
         viewPageAdapter = new ViewPageAdapter(this);
         viewPager2.setAdapter(viewPageAdapter);
+
+
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -92,6 +93,7 @@ public class Index extends AppCompatActivity {
                 tabLayout.getTabAt(position).select();
             }
         });
+
 
 
 //        lq = new LoaiQuanDataSource(this);

@@ -22,11 +22,10 @@ public class Details extends AppCompatActivity {
             String name = intent.getStringExtra("tenquan");
             String diadiem = intent.getStringExtra("diadiem");
             int hinhanh = intent.getIntExtra("hinhanh", R.drawable.phencoffee);
-
-
             binding.txtTenQuan.setText(name);
             binding.txtDes.setText(diadiem);
             binding.img.setImageResource(hinhanh);
+
         }
     }
 }

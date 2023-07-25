@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="50dp"
+        android:text="Đăng Ký Tài khoản"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="372dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/textTen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/radius"
+            android:backgroundTint="#D8D2D2"
+            android:drawablePadding="20dp"
+            android:ems="10"
+            android:hint="Nhập họ và tên"
+            android:inputType="text"
+            android:padding="20dp"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/reUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#D8D2D2"
+            android:drawableLeft="@drawable/baseline_account_circle_24"
+            android:drawablePadding="20dp"
+            android:ems="10"
+            android:hint="Nhập tài khoản"
+            android:inputType="text"
+            android:padding="20dp" />
+
+        <EditText
+            android:id="@+id/textPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radius"
+            android:backgroundTint="#D8D2D2"
+            android:drawableLeft="@drawable/baseline_lock_24"
+            android:drawablePadding="20dp"
+            android:ems="10"
+            android:hint="Nhập mật khẩu"
+            android:inputType="textPassword"
+            android:padding="20dp" />
+
+        <EditText
+            android:id="@+id/rePass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#D8D2D2"
+            android:drawableLeft="@drawable/baseline_lock_24"
+            android:drawablePadding="20dp"
+            android:ems="10"
+            android:hint="Nhập lại mật khẩu"
+            android:inputType="textPassword"
+            android:padding="20dp" />
+
+        <EditText
+            android:id="@+id/reEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#D8D2D2"
+            android:drawableLeft="@drawable/baseline_email_24"
+            android:drawablePadding="20dp"
+            android:ems="10"
+            android:hint="Nhập email"
+            android:inputType="textEmailAddress"
+            android:padding="20dp" />
+
+        <EditText
+            android:id="@+id/rePhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#D8D2D2"
+            android:drawableLeft="@drawable/baseline_phone_24"
+            android:drawablePadding="20dp"
+            android:ems="10"
+            android:hint="Nhập số điện thoại"
+            android:inputType="phone"
+            android:padding="20dp" />
+
+        <Button
+            android:id="@+id/summitbtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#2050E1"
+            android:text="Đăng ký"
+            android:textSize="25dp" />
+    </LinearLayout>
+</RelativeLayout>
