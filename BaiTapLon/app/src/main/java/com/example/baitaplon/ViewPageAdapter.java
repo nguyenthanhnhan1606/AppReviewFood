@@ -24,8 +24,6 @@ public class ViewPageAdapter extends FragmentStateAdapter {
                 return new QuanAnFragment();
             case 1:
                 return new HistoryFragment();
-            case 2:
-                return new CategoryFragment();
             default:
                 return new QuanAnFragment();
         }
@@ -33,6 +31,6 @@ public class ViewPageAdapter extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 3;
+        return 2;
     }
 }

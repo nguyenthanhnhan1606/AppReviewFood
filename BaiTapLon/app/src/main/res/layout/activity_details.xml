@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toobardetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DA4141"
+        app:title="Chi tiết quán ăn"
+        app:titleMarginStart="30dp"
+        app:titleTextColor="@color/black"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        />
 
     <ImageView
         android:id="@+id/img"
         android:layout_width="match_parent"
         android:layout_height="213dp"
+        android:layout_below="@id/toobardetail"
         android:src="@color/blue" />
+
 
     <TextView
         android:id="@+id/txtTenQuan"
@@ -32,7 +47,7 @@
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tabLayout"
+        android:id="@+id/tab"
         android:layout_below="@+id/txtDes">
 
 
@@ -54,7 +69,7 @@
         android:id="@+id/viewpager2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/tabLayout">
+        android:layout_below="@+id/tab">
     </androidx.viewpager2.widget.ViewPager2>
 
 </RelativeLayout>

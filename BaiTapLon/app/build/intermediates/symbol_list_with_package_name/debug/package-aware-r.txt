@@ -1276,6 +1276,7 @@ color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
 color green
+color grey
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color indigo
@@ -2444,9 +2445,12 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable banhmipewpew
 drawable baseline_account_circle_24
+drawable baseline_arrow_back_ios_24
 drawable baseline_email_24
 drawable baseline_lock_24
+drawable baseline_menu_24
 drawable baseline_phone_24
+drawable baseline_search_24
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2455,6 +2459,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable cafemuarao
 drawable custom_button
 drawable design_fab_background
 drawable design_ic_visibility
@@ -2576,6 +2581,7 @@ id accessibility_custom_action_9
 id actionDown
 id actionDownUp
 id actionUp
+id action_about
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -2592,6 +2598,8 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_search
+id action_settings
 id action_text
 id actions
 id activity_chooser_view_content
@@ -2863,6 +2871,7 @@ id progressBar
 id progress_circular
 id progress_horizontal
 id radio
+id ratingBar
 id ratio
 id reEmail
 id reLayout
@@ -2937,9 +2946,11 @@ id staticPostLayout
 id stop
 id stretch
 id submenuarrow
+id submitRate
 id submit_area
 id summitbtn
 id supportScrollUp
+id tab
 id tabLayout
 id tabMode
 id tag_accessibility_actions
@@ -2970,8 +2981,6 @@ id textStart
 id textTen
 id textTop
 id textUser
-id textView5
-id textView6
 id textViewSignUp
 id text_input_end_icon
 id text_input_error_icon
@@ -2987,6 +2996,8 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id toobar
+id toobardetail
 id top
 id topPanel
 id touch_outside
@@ -2998,7 +3009,6 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
-id txtDanhGia
 id txtDes
 id txtName
 id txtSub
@@ -3212,6 +3222,8 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+menu menudetail
+menu mymenu
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description

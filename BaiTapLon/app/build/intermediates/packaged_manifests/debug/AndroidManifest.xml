@@ -29,7 +29,8 @@
         android:theme="@style/Theme.BaiTapLon" >
         <activity
             android:name="com.example.baitaplon.Details"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName="com.example.baitaplon.Index" />
         <activity
             android:name="com.example.baitaplon.Splash"
             android:exported="true" >
