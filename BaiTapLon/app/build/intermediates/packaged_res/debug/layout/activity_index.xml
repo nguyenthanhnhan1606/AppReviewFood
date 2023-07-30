@@ -25,28 +25,6 @@
             />
 
 
-<<<<<<< HEAD
-=======
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="55dp"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:text="HÔM NAY ĂN GÌ"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="65dp"
-            android:layout_height="64dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerInParent="true"
-            android:layout_marginRight="4dp"
-            android:background="@drawable/baseline_account_circle_24" />
-
->>>>>>> 6dc82a4a58d34bb0eb2328df085158c3c3bebc4d
     </RelativeLayout>
 
 

@@ -2595,8 +2595,8 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
-id action_history
 id action_image
+id action_logout
 id action_menu_divider
 id action_menu_presenter
 id action_mode_bar
@@ -2882,11 +2882,8 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratingBar
-<<<<<<< HEAD
-=======
 id ratingBar2
 id ratingBar3
->>>>>>> 6dc82a4a58d34bb0eb2328df085158c3c3bebc4d
 id ratio
 id reEmail
 id reLayout
@@ -2961,11 +2958,9 @@ id staticPostLayout
 id stop
 id stretch
 id submenuarrow
-id submitRate
 id submit_area
 id summitbtn
 id supportScrollUp
-id tab
 id tabLayout
 id tabMode
 id tag_accessibility_actions
@@ -3240,10 +3235,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
-<<<<<<< HEAD
 menu menudetail
-=======
->>>>>>> 6dc82a4a58d34bb0eb2328df085158c3c3bebc4d
 menu mymenu
 mipmap ic_launcher
 mipmap ic_launcher_round

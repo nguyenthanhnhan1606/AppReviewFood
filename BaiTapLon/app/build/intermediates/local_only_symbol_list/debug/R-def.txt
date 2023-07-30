@@ -23,10 +23,7 @@ drawable baseline_lock_24
 drawable baseline_menu_24
 drawable baseline_phone_24
 drawable baseline_search_24
-<<<<<<< HEAD
 drawable cafemuarao
-=======
->>>>>>> 6dc82a4a58d34bb0eb2328df085158c3c3bebc4d
 drawable custom_button
 drawable edittext_rounded_corner
 drawable heypelo
@@ -40,18 +37,13 @@ drawable sabichuong
 drawable tiemtrathangtu
 font arimo_italic
 id action_about
-<<<<<<< HEAD
-id action_search
-id action_settings
-=======
-id action_history
+id action_logout
 id action_search
 id action_settings
 id btnSendComment
 id btnSubmit
 id commentTextView
 id editTextComment
->>>>>>> 6dc82a4a58d34bb0eb2328df085158c3c3bebc4d
 id forgot
 id hightlight
 id image
@@ -64,20 +56,15 @@ id listHis
 id loginbtn
 id progressBar
 id ratingBar
-<<<<<<< HEAD
-=======
 id ratingBar2
 id ratingBar3
->>>>>>> 6dc82a4a58d34bb0eb2328df085158c3c3bebc4d
 id reEmail
 id reLayout
 id rePass
 id rePhone
 id reUser
 id regisBtn
-id submitRate
 id summitbtn
-id tab
 id tabLayout
 id text
 id textPass
@@ -87,11 +74,8 @@ id textUser
 id textViewSignUp
 id timestampTextView
 id title
-<<<<<<< HEAD
 id toobar
 id toobardetail
-=======
->>>>>>> 6dc82a4a58d34bb0eb2328df085158c3c3bebc4d
 id txtDes
 id txtName
 id txtSub
@@ -112,10 +96,7 @@ layout fragment_danh_gia
 layout fragment_history
 layout fragment_quan_an
 layout list_row
-<<<<<<< HEAD
 menu menudetail
-=======
->>>>>>> 6dc82a4a58d34bb0eb2328df085158c3c3bebc4d
 menu mymenu
 mipmap ic_launcher
 mipmap ic_launcher_round

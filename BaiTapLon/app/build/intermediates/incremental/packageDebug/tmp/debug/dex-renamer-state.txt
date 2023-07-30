@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-#Sun Jul 30 20:00:36 ICT 2023
-=======
-#Sun Jul 30 10:56:00 ICT 2023
->>>>>>> 6dc82a4a58d34bb0eb2328df085158c3c3bebc4d
+#Sun Jul 30 21:23:31 ICT 2023
 base.0=D\:\\AppReviewFood\\BaiTapLon\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=D\:\\AppReviewFood\\BaiTapLon\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=D\:\\AppReviewFood\\BaiTapLon\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex

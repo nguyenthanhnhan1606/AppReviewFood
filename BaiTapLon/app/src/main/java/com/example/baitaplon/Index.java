@@ -22,6 +22,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.baitaplon.database.CommentDataSource;
 import com.example.baitaplon.database.LoaiQuan;
@@ -128,10 +129,9 @@ public class Index extends AppCompatActivity {
 //        loaiQuan = this.lq.insertLoaiQuan("Quán ăn");
 //        loaiQuan = this.lq.insertLoaiQuan("Quán nước");
         ArrayList<LoaiQuan> loaiQuans = new ArrayList<LoaiQuan>();
-//        loaiQuans.add(loaiQuan);
+        loaiQuans.add(loaiQuan);
         loaiQuans = this.lq.getAllLoai();
-//        ArrayAdapter<LoaiQuan> aa = new ArrayAdapter<LoaiQuan>(this, android.R.layout.simple_list_item_1, loaiQuans);
-//        listView.setAdapter(aa);
+
 
 
 
@@ -148,7 +148,7 @@ public class Index extends AppCompatActivity {
 //        quanAn = this.qa.insertQuanAn("Cơm Tấm Sà Bì Chưởng", "179 Trần Bình Trọng, P.3, Quận 5, TP.HCM", 8.0, R.drawable.sabichuong, true, loaiQuans.get(0).getId());
 //        quanAn = this.qa.insertQuanAn("Tiệm trà tháng tư", "1 Nhiêu Tứ, P.7, Quận Phú Nhuận, TPHCM", 6.0, R.drawable.tiemtrathangtu, true, loaiQuans.get(1).getId());
 //        quanAn = this.qa.insertQuanAn("Bánh mì Pew Pew", "66 Út Tịch, P.4, Quận Tân Bình, TP.HCM", 7.0, R.drawable.banhmipewpew, true, loaiQuans.get(0).getId());
-//        quanAn = this.qa.insertQuanAn("Cafe Mưa rào", "115/174B Lê Văn Sỹ, Phường 13, Phú Nhuận, TP. HCM", 9.0, R.drawable.cafemuarao, true, loaiQuans.get(1).getId());>>>>>>> 6dc82a4a58d34bb0eb2328df085158c3c3bebc4d
+//        quanAn = this.qa.insertQuanAn("Cafe Mưa rào", "115/174B Lê Văn Sỹ, Phường 13, Phú Nhuận, TP. HCM", 9.0, R.drawable.cafemuarao, true, loaiQuans.get(1).getId());
         ArrayList<QuanAn> quanAns = new ArrayList<QuanAn>();
 //        quanAns.add(quanAn);
         quanAns = this.qa.getAllQuan();
@@ -209,7 +209,14 @@ public class Index extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        //..
+        int id = item.getItemId();
+
+        if (id == R.id.action_logout){
+            Intent intent = new Intent(getApplicationContext(), Login.class);
+            startActivity(intent);
+            finish();
+            Toast.makeText(Index.this, "Đăng xuất thành công", Toast.LENGTH_SHORT).show();
+        }
         return super.onOptionsItemSelected(item);
     }
 
