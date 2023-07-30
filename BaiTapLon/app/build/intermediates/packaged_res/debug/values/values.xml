@@ -5,8 +5,10 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
+    <color name="gray">#DCDCDC</color>
     <color name="green">#00FF00</color>
     <color name="indigo">#4B0082</color>
+    <color name="lightblue">#40E0D0</color>
     <color name="orange">#FF7F00</color>
     <color name="red">#FF0000</color>
     <color name="violet">#9400D3</color>
