@@ -1,5 +1,6 @@
 package com.example.baitaplon.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,60 +8,73 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
+import com.example.baitaplon.Details;
+import com.example.baitaplon.Index;
+import com.example.baitaplon.QuanAnAdapter;
 import com.example.baitaplon.R;
+import com.example.baitaplon.database.Comment;
+import com.example.baitaplon.database.CommentDataSource;
+import com.example.baitaplon.database.QuanAn;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link HistoryFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class HistoryFragment extends Fragment {
+    public static final String INTENT_ID_QUAN="id_quanan";
+    public static final String INTENT_ID_USER="id_user";
+    private int id_user_his;
+    QuanAnAdapter quanAnAdapter;
+    ListView listHis;
+    Index activityIndex;
+    CommentDataSource commentDataSource;
+    View mview;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public HistoryFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment HistoryFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static HistoryFragment newInstance(String param1, String param2) {
-        HistoryFragment fragment = new HistoryFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_history, container, false);
+        mview = inflater.inflate(R.layout.fragment_history, container, false);
+        activityIndex = (Index) getActivity();
+        id_user_his = activityIndex.getId_user_index();
+
+
+        initUI();
+        return mview;
+    }
+
+    private void initUI() {
+        commentDataSource = new CommentDataSource(requireContext());
+        commentDataSource.open();
+
+
+        ArrayList<QuanAn> listQuanAn = commentDataSource.getAllHisQuanAn(id_user_his);
+        listHis = mview.findViewById(R.id.listHis);
+
+        // Tạo Adapter và set cho ListView
+        quanAnAdapter= new QuanAnAdapter(requireContext(),R.layout.list_row,listQuanAn);
+        listHis.setAdapter(quanAnAdapter);
+        listHis.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Lấy thông tin quán ăn tại vị trí nhấp vào
+                // Chuyển sang trang Detail và truyền thông tin của quán ăn
+                Intent intent = new Intent(requireContext(), Details.class);
+                intent.putExtra("tenquan", listQuanAn.get(position).getTenquan());
+                intent.putExtra("diadiem", listQuanAn.get(position).getDiadiem());
+                intent.putExtra("hinhanh", listQuanAn.get(position).getHinhanh());
+
+                intent.putExtra(INTENT_ID_QUAN,listQuanAn.get(position).getId());
+                intent.putExtra(INTENT_ID_USER,id_user_his);
+                startActivity(intent);
+            }
+        });
+        commentDataSource.close();
     }
 }

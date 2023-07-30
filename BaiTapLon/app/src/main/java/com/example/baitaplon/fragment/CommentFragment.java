@@ -4,63 +4,87 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Toast;
 
+import com.example.baitaplon.CommentAdapter;
+import com.example.baitaplon.Details;
+import com.example.baitaplon.Index;
 import com.example.baitaplon.R;
+import com.example.baitaplon.database.Comment;
+import com.example.baitaplon.database.CommentDataSource;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link CommentFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class CommentFragment extends Fragment {
+    ListView listComments;
+    EditText editComment;
+    Button btnSendComment;
+    ArrayList<Comment> listcomment;
+    private CommentAdapter commentAdapter;
+    private Details activityDetail;
+    private View mview;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public CommentFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment CommentFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static CommentFragment newInstance(String param1, String param2) {
-        CommentFragment fragment = new CommentFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_comment, container, false);
+        mview = inflater.inflate(R.layout.fragment_comment, container, false);
+        activityDetail = (Details) getActivity();
+        editComment = mview.findViewById(R.id.editTextComment);
+        btnSendComment = mview.findViewById(R.id.btnSendComment);
+
+        btnSendComment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int id_quan= activityDetail.getId_quan_detail();
+                CommentDataSource commentDataSource = new CommentDataSource(requireContext());
+                commentDataSource.open();
+                listcomment = commentDataSource.getAllCommentsByid(id_quan);
+                if(!editComment.getText().toString().isEmpty()){
+                    commentAdapter.clear();
+                    commentDataSource.insertComment(editComment.getText().toString(),0, String.valueOf(LocalDate.now()),activityDetail.getId_user_detail(),activityDetail.getId_quan_detail());
+                    listcomment = commentDataSource.getAllCommentsByid(id_quan);
+                    commentAdapter = new CommentAdapter(requireContext(), listcomment);
+                    listComments = mview.findViewById(R.id.listComments);
+                    listComments.setAdapter(commentAdapter);
+
+                    Toast.makeText(requireContext(), "Bình luận thành công", Toast.LENGTH_SHORT).show();
+                    editComment.setText("");
+                }else {
+                    Toast.makeText(requireContext(), "Bình luận của bạn chưa nhập!", Toast.LENGTH_SHORT).show();
+                }
+
+                commentDataSource.close();
+            }
+        });
+        initUI();
+        return  mview;
+    }
+
+    private void initUI() {
+        int id_quan= activityDetail.getId_quan_detail();
+        CommentDataSource cmd= new CommentDataSource(requireActivity());
+        cmd.open();
+        cmd.getAllCommentsByid(id_quan);
+        listcomment = cmd.getAllCommentsByid(id_quan);
+        commentAdapter = new CommentAdapter(requireContext(), listcomment);
+        listComments = mview.findViewById(R.id.listComments);
+//        ArrayAdapter<Comment> adapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_list_item_1, listcomment);
+        listComments.setAdapter(commentAdapter);
+
+        cmd.close();
     }
 }

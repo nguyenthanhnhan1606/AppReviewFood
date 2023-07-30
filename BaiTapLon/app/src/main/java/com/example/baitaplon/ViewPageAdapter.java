@@ -6,8 +6,6 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.baitaplon.fragment.CategoryFragment;
-import com.example.baitaplon.fragment.CommentFragment;
-import com.example.baitaplon.fragment.DanhGiaFragment;
 import com.example.baitaplon.fragment.HistoryFragment;
 import com.example.baitaplon.fragment.QuanAnFragment;
 

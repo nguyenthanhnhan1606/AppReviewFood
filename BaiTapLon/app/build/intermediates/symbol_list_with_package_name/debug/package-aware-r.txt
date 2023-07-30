@@ -1275,11 +1275,13 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color gray
 color green
 color grey
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color indigo
+color lightblue
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color
@@ -2466,6 +2468,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable edittext_rounded_corner
 drawable heypelo
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
@@ -2592,6 +2595,7 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
+id action_history
 id action_image
 id action_menu_divider
 id action_menu_presenter
@@ -2631,6 +2635,8 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnSendComment
+id btnSubmit
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2657,6 +2663,7 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
+id commentTextView
 id compress
 id confirm_button
 id constraint
@@ -2705,6 +2712,7 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id editTextComment
 id edit_query
 id elastic
 id end
@@ -2770,6 +2778,8 @@ id line3
 id linear
 id linearLayout
 id list
+id listComments
+id listHis
 id listMode
 id list_item
 id loginbtn
@@ -2872,6 +2882,11 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratingBar
+<<<<<<< HEAD
+=======
+id ratingBar2
+id ratingBar3
+>>>>>>> 6dc82a4a58d34bb0eb2328df085158c3c3bebc4d
 id ratio
 id reEmail
 id reLayout
@@ -2992,6 +3007,7 @@ id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
 id time
+id timestampTextView
 id title
 id titleDividerNoCustom
 id title_template
@@ -3018,6 +3034,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id usernameTextView
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3124,6 +3141,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_comment_items
 layout activity_details
 layout activity_index
 layout activity_main
@@ -3222,7 +3240,10 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+<<<<<<< HEAD
 menu menudetail
+=======
+>>>>>>> 6dc82a4a58d34bb0eb2328df085158c3c3bebc4d
 menu mymenu
 mipmap ic_launcher
 mipmap ic_launcher_round

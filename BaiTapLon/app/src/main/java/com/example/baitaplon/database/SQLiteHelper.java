@@ -49,11 +49,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     private static String CREATE_QUANAN = "create table " + TABLE_QUANAN + "( " + COLUMN_IDQA + " integer primary key autoincrement, " + COLUMN_TENQUAN + " varchar(20), " + COLUMN_DIADIEM + " varchar(50), " + COLUMN_DANHGIA + " double, " + COLUMN_HINHANH + " int, " + COLUMN_ACTIVEQ + " bit, " + COLUMN_IDLOAI + " integer, foreign key(" + COLUMN_IDLOAI + ") references " + TABLE_LOAIQUAN + "(" + COLUMN_IDLQ + "))";
     private static String CREATE_USER = "create table " + TABLE_USER + "( " + COLUMN_IDU + " integer primary key autoincrement, " + COLUMN_USERNAME + " varchar(10), " + COLUMN_PASSWORD + " varchar(10), " + COLUMN_HOTEN + " varchar(20), " + COLUMN_EMAIL + " varchar(30), " + COLUMN_SDT + " varchar(10), " + COLUMN_AVATAR + " int, " + COLUMN_ACTIVEU + " bit, " + COLUMN_ROLE + " varchar(10))";
 
-    private static String CREATE_COMMENT = "create table " + TABLE_COMMENT + "( " + COLUMN_IDC + " integer primary key autoincrement, " + COLUMN_NOIDUNG + " varchar(100), " + COLUMN_DANHGIA_CM + " double, " + COLUMN_NGAYDANG + " datetime, " + COLUMN_ACTIVEC + " bit, " + COLUMN_IDUSER + " integer, " + COLUMN_IDQUAN + " integer, foreign key(" + COLUMN_IDUSER + ") references " + TABLE_USER + "(" + COLUMN_IDU + "), foreign key(" + COLUMN_IDQUAN + ") references " + TABLE_QUANAN + "(" + COLUMN_IDQA + "))";
-
-
-
-
+    private static String CREATE_COMMENT = "create table " + TABLE_COMMENT + "( " + COLUMN_IDC + " integer primary key autoincrement, " + COLUMN_NOIDUNG + " varchar(100), " + COLUMN_DANHGIA_CM + " double, " + COLUMN_NGAYDANG + " varchar(20), " + COLUMN_ACTIVEC + " bit, " + COLUMN_IDUSER + " integer, " + COLUMN_IDQUAN + " integer, foreign key(" + COLUMN_IDUSER + ") references " + TABLE_USER + "(" + COLUMN_IDU + "), foreign key(" + COLUMN_IDQUAN + ") references " + TABLE_QUANAN + "(" + COLUMN_IDQA + "))";
 
 
     public SQLiteHelper( Context context) {

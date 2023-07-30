@@ -1,7 +1,8 @@
 package com.example.baitaplon;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
+
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
@@ -13,18 +14,28 @@ import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.Toolbar;
 
+import com.example.baitaplon.database.CommentDataSource;
+import com.google.android.material.tabs.TabLayout;
 import com.example.baitaplon.databinding.ActivityDetailsBinding;
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
+
 
 public class Details extends AppCompatActivity {
+    private int id_quan_detail;
+    private int id_user_detail;
+    public static final String INTENT_ID_QUAN="id_quanan";
+    public static final String INTENT_ID_USER="id_user";
+    public static final String INTENT_DANHGIA="danhgia";
 
-    Button button;
-    RatingBar ratingBar;
+
     androidx.appcompat.widget.Toolbar bar;
+
+
+    private ViewPager2 viewPager2;
+    TabLayout tblay;
     ActivityDetailsBinding binding;
 
-    TabLayout tabLayout;
-    ViewPager2 viewPager2;
     ViewPageDetailAdapter viewPageDetailAdapter;
 
     @Override
@@ -35,49 +46,59 @@ public class Details extends AppCompatActivity {
         bar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toobardetail);
         setSupportActionBar(bar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        button = (Button) findViewById(R.id.submitRate);
-        ratingBar = (RatingBar) findViewById(R.id.ratingBar);
 
-        tabLayout = (TabLayout) findViewById(R.id.tab);
+
         viewPager2 = (ViewPager2) findViewById(R.id.viewpager2);
         viewPageDetailAdapter = new ViewPageDetailAdapter(this);
         viewPager2.setAdapter(viewPageDetailAdapter);
 
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager2.setCurrentItem(tab.getPosition());
-            }
 
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
+        tblay = findViewById(R.id.tabLayout);
 
-            }
+        viewPager2 = findViewById(R.id.viewpager2);
 
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-                viewPager2.setCurrentItem(tab.getPosition());
-            }
-        });
+        ViewPager2Adapter viewPager2Adapter = new ViewPager2Adapter(this);
+        viewPager2.setAdapter(viewPager2Adapter);
 
-        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+        new TabLayoutMediator(tblay, viewPager2, new TabLayoutMediator.TabConfigurationStrategy() {
             @Override
-            public void onPageSelected(int position) {
-                super.onPageSelected(position);
-                tabLayout.getTabAt(position).select();
+            public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
+                switch (position) {
+                    case 0:
+                        tab.setText("Bình luận");
+                        break;
+                    case 1:
+                        tab.setText("Đánh giá");
+                        break;
+                }
             }
-        });
+        }).attach();
+
 
         Intent intent = this.getIntent();
-        if (intent != null){
+        if (intent != null) {
             String name = intent.getStringExtra("tenquan");
             String diadiem = intent.getStringExtra("diadiem");
             int hinhanh = intent.getIntExtra("hinhanh", R.drawable.phencoffee);
+
+
+            id_quan_detail = intent.getIntExtra(INTENT_ID_QUAN, -1);
+            id_user_detail = intent.getIntExtra(INTENT_ID_USER, -1);
+
+            CommentDataSource commentDataSource = new CommentDataSource(this);
+            commentDataSource.open();
+            int quantityUser = commentDataSource.getCountUserCommentForQuan(id_quan_detail);
+            double totalRating = commentDataSource.getTotalMaxDanhGia(id_quan_detail);
+            float avg = (float) (totalRating/quantityUser);
+
+
+
             binding.txtTenQuan.setText(name);
             binding.txtDes.setText(diadiem);
             binding.img.setImageResource(hinhanh);
-
+            binding.ratingBar3.setRating(avg);
         }
+
 
     }
 
@@ -92,4 +113,14 @@ public class Details extends AppCompatActivity {
         //..
         return super.onOptionsItemSelected(item);
     }
+
+    public int getId_user_detail() {
+        return id_user_detail;
+    }
+    public int getId_quan_detail() {
+        return id_quan_detail;
+    }
+
+
+
 }

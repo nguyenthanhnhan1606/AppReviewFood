@@ -22,6 +22,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.example.baitaplon.database.CommentDataSource;
 import com.example.baitaplon.database.LoaiQuan;
 import com.example.baitaplon.database.LoaiQuanDataSource;
 import com.example.baitaplon.database.QuanAn;
@@ -29,8 +31,13 @@ import com.example.baitaplon.database.QuanAnDataSource;
 import com.example.baitaplon.database.SQLiteHelper;
 import com.example.baitaplon.databinding.ActivityIndexBinding;
 import com.google.android.material.tabs.TabLayout;
+
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.List;
+
+
 
 
 public class Index extends AppCompatActivity {
@@ -48,6 +55,16 @@ public class Index extends AppCompatActivity {
     private QuanAnDataSource qa;
     private LoaiQuan loaiQuan;
     private QuanAn quanAn;
+
+    public static final String INTENT_ID_QUAN="id_quanan";
+    public static final String INTENT_ID_USER="id_user";
+
+    public static final String INTENT_DANHGIA="danhgia";
+    private  int id_user_index;
+
+
+
+
 
 
 
@@ -67,6 +84,7 @@ public class Index extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+
         viewPager2 = (ViewPager2) findViewById(R.id.viewpager);
         viewPageAdapter = new ViewPageAdapter(this);
         viewPager2.setAdapter(viewPageAdapter);
@@ -121,35 +139,51 @@ public class Index extends AppCompatActivity {
         qa = new QuanAnDataSource(this);
         qa.open();
 
+        //Lấy id User
+        Intent intent = getIntent();
+        id_user_index = intent.getIntExtra(INTENT_ID_USER,-1);
+
 //        quanAn = this.qa.insertQuanAn("Phen's Coffee", "142 Nguyễn Văn Công, P.3, Quận Gò Vấp, TP.HCM", 7.0, R.drawable.phencoffee, true, loaiQuans.get(1).getId());
 //        quanAn = this.qa.insertQuanAn("Hey Pelo", "60 Trần Khắc Chân, P.Tân Định, Quận 1, TP.HCM", 8.0, R.drawable.heypelo, true, loaiQuans.get(0).getId());
 //        quanAn = this.qa.insertQuanAn("Cơm Tấm Sà Bì Chưởng", "179 Trần Bình Trọng, P.3, Quận 5, TP.HCM", 8.0, R.drawable.sabichuong, true, loaiQuans.get(0).getId());
 //        quanAn = this.qa.insertQuanAn("Tiệm trà tháng tư", "1 Nhiêu Tứ, P.7, Quận Phú Nhuận, TPHCM", 6.0, R.drawable.tiemtrathangtu, true, loaiQuans.get(1).getId());
 //        quanAn = this.qa.insertQuanAn("Bánh mì Pew Pew", "66 Út Tịch, P.4, Quận Tân Bình, TP.HCM", 7.0, R.drawable.banhmipewpew, true, loaiQuans.get(0).getId());
-//        quanAn = this.qa.insertQuanAn("Cafe Mưa rào", "115/174B Lê Văn Sỹ, Phường 13, Phú Nhuận, TP. HCM", 9.0, R.drawable.cafemuarao, true, loaiQuans.get(1).getId());
-
+//        quanAn = this.qa.insertQuanAn("Cafe Mưa rào", "115/174B Lê Văn Sỹ, Phường 13, Phú Nhuận, TP. HCM", 9.0, R.drawable.cafemuarao, true, loaiQuans.get(1).getId());>>>>>>> 6dc82a4a58d34bb0eb2328df085158c3c3bebc4d
         ArrayList<QuanAn> quanAns = new ArrayList<QuanAn>();
-        quanAns.add(quanAn);
+//        quanAns.add(quanAn);
         quanAns = this.qa.getAllQuan();
 
         quanAnAdapter = new QuanAnAdapter(this, R.layout.list_row, quanAns);
         binding.list.setAdapter(quanAnAdapter);
         binding.list.setClickable(true);
         ArrayList<QuanAn> finalQuanAns = quanAns;
+        CommentDataSource commentDataSource = new CommentDataSource(this);
         binding.list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
                 Intent intent = new Intent(Index.this, Details.class);
                 intent.putExtra("tenquan", finalQuanAns.get(position).getTenquan());
                 intent.putExtra("diadiem", finalQuanAns.get(position).getDiadiem());
                 intent.putExtra("hinhanh", finalQuanAns.get(position).getHinhanh());
+
+
+
+                intent.putExtra(INTENT_ID_QUAN,finalQuanAns.get(position).getId());
+                intent.putExtra(INTENT_ID_USER,id_user_index);
                 startActivity(intent);
+
+                commentDataSource.open();
+                if(!commentDataSource.checkHis(id_user_index, finalQuanAns.get(position).getId())){
+                    commentDataSource.insertComment("",0, String.valueOf(LocalDate.now()),id_user_index,finalQuanAns.get(position).getId());
+                }
+                commentDataSource.close();
+
             }
         });
 ////        ArrayAdapter<QuanAn> aa = new ArrayAdapter<QuanAn>(this, android.R.layout.simple_list_item_1, quanAns);
 //        listView.setAdapter(quanAnAdapter);
-
-
+//        return null;
     }
 
     @Override
@@ -192,4 +226,9 @@ public class Index extends AppCompatActivity {
         qa.close();
         super.onPause();
     }
+
+    public int getId_user_index() {
+        return id_user_index;
+    }
+
 }
