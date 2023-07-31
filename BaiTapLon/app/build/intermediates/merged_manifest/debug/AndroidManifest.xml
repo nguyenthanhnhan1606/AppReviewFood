@@ -28,9 +28,6 @@
         android:testOnly="true"
         android:theme="@style/Theme.BaiTapLon" >
         <activity
-            android:name="com.example.baitaplon.Details"
-            android:exported="false" />
-        <activity
             android:name="com.example.baitaplon.Splash"
             android:exported="true" >
             <intent-filter>
@@ -39,6 +36,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.baitaplon.AdminIndex"
+            android:exported="false" />
         <activity
             android:name="com.example.baitaplon.Index"
             android:exported="false" />

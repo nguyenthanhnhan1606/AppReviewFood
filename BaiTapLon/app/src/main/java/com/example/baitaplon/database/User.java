@@ -23,6 +23,9 @@ public class User {
         this.user_role = user_role;
     }
 
+    public User(){
+    }
+
     public int getId() {
         return id;
     }
@@ -93,5 +96,18 @@ public class User {
 
     public void setUser_role(String user_role) {
         this.user_role = user_role;
+    }
+
+    @Override
+    public String toString(){
+        return "ID: "+ id + "\n" +
+                 "Họ tên: "+ hoten + "\n" +
+                "Username: "+ username + "\n" +
+                "Password: "+ password + "\n" +
+                "Email: "+ email + "\n" +
+                "SDT: "+ sdt + "\n" +
+                "Avatar: "+ avatar + "\n" +
+                "Active: "+ active + "\n" +
+                "Role: "+ user_role;
     }
 }

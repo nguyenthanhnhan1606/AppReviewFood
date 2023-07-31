@@ -49,12 +49,16 @@ public class Login extends AppCompatActivity {
                 if (username.equals("") || password.equals("")){
                     Toast.makeText(getApplicationContext(),"Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                 }else{
-                    boolean checkLogin = userDataSource.checkLogin(username, password);
-                    if (checkLogin == true){
+                    String checkLogin = userDataSource.checkLogin(username, password);
+                    if (checkLogin.equalsIgnoreCase("user")){
                         Toast.makeText(getApplicationContext(),"Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getApplicationContext(), Index.class);
                         startActivity(intent);
-                    }else{
+                    } else if (checkLogin.equalsIgnoreCase("admin")) {
+                        Toast.makeText(getApplicationContext(),"Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), AdminIndex.class);
+                        startActivity(intent);
+                    } else{
                         Toast.makeText(getApplicationContext(),"Đăng nhập thất bại", Toast.LENGTH_SHORT).show();
                     }
                 }

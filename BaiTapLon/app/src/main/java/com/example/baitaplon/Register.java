@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.baitaplon.database.SQLiteHelper;
+import com.example.baitaplon.database.User;
 import com.example.baitaplon.database.UserDataSource;
 
 public class Register extends AppCompatActivity {
