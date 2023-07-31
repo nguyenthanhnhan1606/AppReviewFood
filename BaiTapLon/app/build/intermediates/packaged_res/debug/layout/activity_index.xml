@@ -9,36 +9,22 @@
     <RelativeLayout
         android:id="@+id/reLayout"
         android:layout_width="match_parent"
-        android:layout_height="85dp"
-        android:background="#DA4141"
+        android:layout_height="60dp"
         tools:ignore="InvalidId">
+        
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toobar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DA4141"
+            app:title="Hôm nay ăn gì"
+            app:titleMarginStart="30dp"
+            app:titleTextColor="@color/black"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            />
 
-        <TextView
-            android:layout_width="66dp"
-            android:layout_height="57dp"
-            android:layout_alignParentLeft="true"
-            android:layout_centerInParent="true"
-            android:layout_margin="5dp"
-            android:background="@drawable/logo" />
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="55dp"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:text="HÔM NAY ĂN GÌ"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="65dp"
-            android:layout_height="64dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerInParent="true"
-            android:layout_marginRight="4dp"
-            android:background="@drawable/baseline_account_circle_24" />
     </RelativeLayout>
 
 
@@ -58,10 +44,6 @@
             android:layout_height="wrap_content"
             android:text="Xem lịch sử" />
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tìm theo danh mục" />
 
     </com.google.android.material.tabs.TabLayout>
 
@@ -87,12 +69,13 @@
         android:layout_width="wrap_content"
         android:orientation="vertical"
         android:layout_below="@id/hightlight">
+
         <ListView
             android:id="@+id/list"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:divider = "#000"
-            android:dividerHeight = "1dp"
+            android:divider="#000"
+            android:dividerHeight="1dp"
             tools:ignore="InvalidId" />
     </LinearLayout>
 
