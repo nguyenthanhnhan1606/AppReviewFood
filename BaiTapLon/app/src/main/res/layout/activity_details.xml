@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toobardetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DA4141"
+        app:title="Chi tiết quán ăn"
+        app:titleMarginStart="30dp"
+        app:titleTextColor="@color/black"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        />
 
     <ImageView
         android:id="@+id/img"
         android:layout_width="match_parent"
-        android:layout_height="213dp"
+        android:layout_below="@id/toobardetail"
+        android:layout_height="237dp"
+        android:scaleType="centerCrop"
         android:src="@color/blue" />
+
 
     <TextView
         android:id="@+id/txtTenQuan"
@@ -17,6 +33,7 @@
         android:layout_below="@+id/img"
         android:fontFamily="@font/arimo_italic"
         android:text="text"
+        android:textColor="@android:color/black"
         android:textSize="20dp" />
 
     <TextView
@@ -27,26 +44,37 @@
         android:layout_below="@+id/txtTenQuan"
         android:fontFamily="@font/arimo_italic"
         android:text="sub text"
+        android:textColor="@android:color/black"
         android:textSize="20dp" />
 
+    <RatingBar
+        android:id="@+id/ratingBar3"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDes"
+        android:layout_marginTop="8dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:progressTint="@color/yellow"
+        android:stepSize="0.1" />
+
     <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tabLayout"
-        android:layout_below="@+id/txtDes">
+        android:layout_below="@+id/ratingBar3">
 
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bình luận"
-            />
+            android:text="Bình luận" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Đánh giá"
-            />
+            android:text="Đánh giá" />
 
     </com.google.android.material.tabs.TabLayout>
 
@@ -54,7 +82,8 @@
         android:id="@+id/viewpager2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/tabLayout">
-    </androidx.viewpager2.widget.ViewPager2>
+        android:layout_below="@+id/tabLayout"></androidx.viewpager2.widget.ViewPager2>
+
+
 
 </RelativeLayout>

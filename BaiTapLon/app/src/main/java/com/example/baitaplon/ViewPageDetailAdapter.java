@@ -6,11 +6,13 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.baitaplon.fragment.CategoryFragment;
+import com.example.baitaplon.fragment.CommentFragment;
+import com.example.baitaplon.fragment.DanhGiaFragment;
 import com.example.baitaplon.fragment.HistoryFragment;
 import com.example.baitaplon.fragment.QuanAnFragment;
 
-public class ViewPageAdapter extends FragmentStateAdapter {
-     public ViewPageAdapter(@NonNull FragmentActivity fragmentActivity) {
+public class ViewPageDetailAdapter extends FragmentStateAdapter {
+    public ViewPageDetailAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
     }
 
@@ -19,11 +21,11 @@ public class ViewPageAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position){
             case 0:
-                return new QuanAnFragment();
+                return new CommentFragment();
             case 1:
-                return new HistoryFragment();
+                return new DanhGiaFragment();
             default:
-                return new QuanAnFragment();
+                return new CommentFragment();
         }
     }
 

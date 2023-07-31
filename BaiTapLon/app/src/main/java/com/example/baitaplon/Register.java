@@ -72,6 +72,7 @@ public class Register extends AppCompatActivity {
                 }
             }
         });
+
     }
 
     @Override

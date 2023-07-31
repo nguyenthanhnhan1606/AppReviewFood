@@ -36,8 +36,8 @@ public class LoaiQuanDataSource {
         return loaiQuan;
     }
 
-    public List<LoaiQuan> getAllLoai(){
-        List<LoaiQuan> loaiQuans = new ArrayList<LoaiQuan>();
+    public ArrayList<LoaiQuan> getAllLoai(){
+        ArrayList<LoaiQuan> loaiQuans = new ArrayList<LoaiQuan>();
 
         Cursor cursor = database.query(SQLiteHelper.TABLE_LOAIQUAN, col, null, null, null,null,null);
         cursor.moveToFirst();

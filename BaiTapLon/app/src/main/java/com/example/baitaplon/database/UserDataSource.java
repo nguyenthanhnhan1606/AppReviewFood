@@ -135,4 +135,14 @@ public class UserDataSource {
         return userRole;
     }
 
+    public int getIdUser (String username, String password) {
+        int id;
+        Cursor cursor = database.rawQuery("select * from User where username = ? and password = ?", new String[]{username, password});
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            return id = cursor.getInt(0);
+        }
+        return -1;
+    }
+
 }

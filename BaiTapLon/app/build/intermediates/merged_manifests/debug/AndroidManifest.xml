@@ -28,6 +28,13 @@
         android:testOnly="true"
         android:theme="@style/Theme.BaiTapLon" >
         <activity
+<<<<<<< HEAD
+=======
+            android:name="com.example.baitaplon.Details"
+            android:exported="false"
+            android:parentActivityName="com.example.baitaplon.Index" />
+        <activity
+>>>>>>> cbed522ae9b6d5573318e89a7cd5732e75bcc982
             android:name="com.example.baitaplon.Splash"
             android:exported="true" >
             <intent-filter>

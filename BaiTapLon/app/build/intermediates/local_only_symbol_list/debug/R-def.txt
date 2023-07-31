@@ -5,8 +5,11 @@ color blue
 color colorAccent
 color colorPrimary
 color colorPrimaryDark
+color gray
 color green
+color grey
 color indigo
+color lightblue
 color orange
 color red
 color violet
@@ -14,12 +17,18 @@ color white
 color yellow
 drawable banhmipewpew
 drawable baseline_account_circle_24
+drawable baseline_arrow_back_ios_24
 drawable baseline_email_24
 drawable baseline_lock_24
 drawable baseline_menu_24
 drawable baseline_phone_24
 drawable baseline_search_24
+<<<<<<< HEAD
+=======
+drawable cafemuarao
+>>>>>>> cbed522ae9b6d5573318e89a7cd5732e75bcc982
 drawable custom_button
+drawable edittext_rounded_corner
 drawable heypelo
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -31,6 +40,7 @@ drawable sabichuong
 drawable tiemtrathangtu
 font arimo_italic
 id action_about
+<<<<<<< HEAD
 id action_history
 id action_search
 id action_settings
@@ -41,6 +51,15 @@ id ed_email
 id ed_fullname
 id ed_password
 id ed_username
+=======
+id action_logout
+id action_search
+id action_settings
+id btnSendComment
+id btnSubmit
+id commentTextView
+id editTextComment
+>>>>>>> cbed522ae9b6d5573318e89a7cd5732e75bcc982
 id forgot
 id hightlight
 id image
@@ -48,9 +67,14 @@ id imageView
 id img
 id linearLayout
 id list
+id listComments
+id listHis
 id loginbtn
 id lvGroup
 id progressBar
+id ratingBar
+id ratingBar2
+id ratingBar3
 id reEmail
 id reLayout
 id rePass
@@ -64,25 +88,39 @@ id textPass
 id textSignin
 id textTen
 id textUser
+<<<<<<< HEAD
 id textView
 id textView2
 id textView5
 id textView6
+=======
+>>>>>>> cbed522ae9b6d5573318e89a7cd5732e75bcc982
 id textViewSignUp
+id timestampTextView
 id title
+<<<<<<< HEAD
 id tv_del
 id tv_edit
 id tv_fullname
 id tv_id
 id tv_username
+=======
+id toobar
+id toobardetail
+>>>>>>> cbed522ae9b6d5573318e89a7cd5732e75bcc982
 id txtDes
 id txtName
 id txtSub
 id txtTenQuan
+id usernameTextView
 id viewpager
 id viewpager2
 id welcome
+<<<<<<< HEAD
 layout activity_admin_index
+=======
+layout activity_comment_items
+>>>>>>> cbed522ae9b6d5573318e89a7cd5732e75bcc982
 layout activity_details
 layout activity_index
 layout activity_main
@@ -98,6 +136,10 @@ layout fragment_history
 layout fragment_quan_an
 layout item_listview_user
 layout list_row
+<<<<<<< HEAD
+=======
+menu menudetail
+>>>>>>> cbed522ae9b6d5573318e89a7cd5732e75bcc982
 menu mymenu
 mipmap ic_launcher
 mipmap ic_launcher_round
