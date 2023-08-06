@@ -64,19 +64,32 @@ public class UserDataSource {
     }
 
     public User selectOne(int id){
-        String[] args = new String[] { id + "" };
-
-
+        User objUser = new User();
         String[] columns = new String[]{"*"};
+        String selection = SQLiteHelper.COLUMN_IDU + " = ?";
+        String[] selectionArgs = new String[]{String.valueOf(id)};
 
-        Cursor c = database.query(SQLiteHelper.TABLE_USER,columns, null, null,null,null,null);
-        if(c != null) {
-            c.moveToFirst();
+        Cursor c = database.query(
+                SQLiteHelper.TABLE_USER,
+                columns,
+                selection,
+                selectionArgs,
+                null, null, null
+        );
+
+        if(c != null & c.moveToFirst()) {
+            int activeInt = c.getInt(7);
+            boolean isActive = (activeInt == 1);
+            objUser.setId(c.getInt(0));
+            objUser.setUsername(c.getString(1));
+            objUser.setPassword(c.getString(2));
+            objUser.setHoten(c.getString(3));
+            objUser.setEmail(c.getString(4));
+            objUser.setSdt(c.getString(5));
+            objUser.setActive(isActive);
+            objUser.setUser_role(c.getString(8));
         }
-        int activeInt = c.getInt(7);
-        boolean isActive = (activeInt == 1);
-        User objUser = new User(c.getInt(0),c.getString(1),c.getString(2),c.getString(3),
-                    c.getString(4),c.getString(5),c.getString(6),isActive, c.getString(8));
+
         return objUser; // nếu không lấy được dữ liệu thì cũng trả về object rỗng
     }
 
@@ -123,7 +136,8 @@ public class UserDataSource {
         if (cursor.getCount() > 0) {
             // Người dùng tồn tại, kiểm tra user_role
             cursor.moveToFirst();
-            int userRoleIndex = cursor.getColumnIndex("user_role"); // Giả sử tên cột lưu trữ user_role là "user_role"
+            int userRoleIndex = cursor.getColumnIndex("user_role");
+            int userActiveIndex = cursor.getColumnIndex("active");
 
             if (userRoleIndex != -1) {
                 userRole = cursor.getString(userRoleIndex);

@@ -2595,7 +2595,6 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
-id action_history
 id action_image
 id action_logout
 id action_menu_divider
@@ -2636,14 +2635,12 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-<<<<<<< HEAD
 id btnAdd
-id btnGroup
+id btnLoaiQuan
 id btnSave
-=======
 id btnSendComment
 id btnSubmit
->>>>>>> cbed522ae9b6d5573318e89a7cd5732e75bcc982
+id btnUser
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2719,14 +2716,15 @@ id easeIn
 id easeInOut
 id easeOut
 id east
-<<<<<<< HEAD
+id ed_avatar
 id ed_email
-id ed_fullname
+id ed_hoten
 id ed_password
+id ed_role
+id ed_sdt
+id ed_tenLoaiQuan
 id ed_username
-=======
 id editTextComment
->>>>>>> cbed522ae9b6d5573318e89a7cd5732e75bcc982
 id edit_query
 id elastic
 id end
@@ -2952,6 +2950,7 @@ id snackbar_text
 id snap
 id snapMargins
 id south
+id sp_active
 id spacer
 id special_effects_controller_view_tag
 id spline
@@ -3006,13 +3005,8 @@ id textStart
 id textTen
 id textTop
 id textUser
-<<<<<<< HEAD
 id textView
 id textView2
-id textView5
-id textView6
-=======
->>>>>>> cbed522ae9b6d5573318e89a7cd5732e75bcc982
 id textViewSignUp
 id text_input_end_icon
 id text_input_error_icon
@@ -3042,14 +3036,12 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
-<<<<<<< HEAD
 id tv_del
 id tv_edit
 id tv_fullname
 id tv_id
+id tv_tenloaiquan
 id tv_username
-=======
->>>>>>> cbed522ae9b6d5573318e89a7cd5732e75bcc982
 id txtDes
 id txtName
 id txtSub
@@ -3166,16 +3158,15 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-<<<<<<< HEAD
 layout activity_admin_index
-=======
 layout activity_comment_items
->>>>>>> cbed522ae9b6d5573318e89a7cd5732e75bcc982
 layout activity_details
 layout activity_index
+layout activity_loaiquan
 layout activity_main
 layout activity_register
 layout activity_splash
+layout activity_uesr
 layout activity_user_adapter
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -3193,13 +3184,16 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_add_loaiquan
 layout dialog_add_user
+layout dialog_edit_loaiquan
 layout dialog_edit_user
 layout fragment_category
 layout fragment_comment
 layout fragment_danh_gia
 layout fragment_history
 layout fragment_quan_an
+layout item_listview_loaiquan
 layout item_listview_user
 layout list_row
 layout m3_alert_dialog
@@ -3273,10 +3267,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
-<<<<<<< HEAD
-=======
 menu menudetail
->>>>>>> cbed522ae9b6d5573318e89a7cd5732e75bcc982
 menu mymenu
 mipmap ic_launcher
 mipmap ic_launcher_round

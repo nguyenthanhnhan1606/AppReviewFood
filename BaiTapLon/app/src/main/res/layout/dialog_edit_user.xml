@@ -15,6 +15,14 @@
         android:textSize="20dp" />
 
     <EditText
+        android:id="@+id/ed_hoten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Nhập họ tên"
+        android:padding="10dp" />
+
+    <EditText
         android:id="@+id/ed_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,9 +35,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:padding="10dp"
         android:hint="Nhập Password"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword"
+        android:padding="10dp" />
     <EditText
         android:id="@+id/ed_email"
         android:layout_width="match_parent"
@@ -38,14 +46,33 @@
         android:padding="10dp"
         android:hint="Nhập Email" />
     <EditText
-        android:id="@+id/ed_fullname"
+        android:id="@+id/ed_sdt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:padding="10dp"
-        android:hint="Nhập Fullname" />
-
-
+        android:hint="Nhập SDT" />
+    <EditText
+        android:id="@+id/ed_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:hint="Nhập Avatar" />
+    <EditText
+        android:id="@+id/ed_role"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:hint="Nhập role" />
+    <Switch
+        android:id="@+id/sp_active"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:hint="Chọn trạng thái" />
     <Button
         android:id="@+id/btnSave"
         android:layout_width="wrap_content"
@@ -53,5 +80,5 @@
         android:layout_gravity="center"
         android:layout_marginBottom="30dp"
         android:backgroundTint="#2196F3"
-        android:text="Save Update" />
+        android:text="Lưu cập nhật" />
 </LinearLayout>
