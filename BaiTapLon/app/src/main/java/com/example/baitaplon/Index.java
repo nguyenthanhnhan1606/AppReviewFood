@@ -143,7 +143,7 @@ public class Index extends AppCompatActivity {
         Intent intent = getIntent();
         id_user_index = intent.getIntExtra(INTENT_ID_USER,-1);
 
-//        quanAn = this.qa.insertQuanAn("Phen's Coffee", "142 Nguyễn Văn Công, P.3, Quận Gò Vấp, TP.HCM", 7.0, R.drawable.phencoffee, true, loaiQuans.get(1).getId());
+//        quanAn = this.qa.insertQuanAn("Phen's Coffee", "142 Nguyễn Văn Công, P.3, Quận Gò Vấp, TP.HCM", 7.0, R.d, true, loaiQuans.get(1).getId());
 //        quanAn = this.qa.insertQuanAn("Hey Pelo", "60 Trần Khắc Chân, P.Tân Định, Quận 1, TP.HCM", 8.0, R.drawable.heypelo, true, loaiQuans.get(0).getId());
 //        quanAn = this.qa.insertQuanAn("Cơm Tấm Sà Bì Chưởng", "179 Trần Bình Trọng, P.3, Quận 5, TP.HCM", 8.0, R.drawable.sabichuong, true, loaiQuans.get(0).getId());
 //        quanAn = this.qa.insertQuanAn("Tiệm trà tháng tư", "1 Nhiêu Tứ, P.7, Quận Phú Nhuận, TPHCM", 6.0, R.drawable.tiemtrathangtu, true, loaiQuans.get(1).getId());

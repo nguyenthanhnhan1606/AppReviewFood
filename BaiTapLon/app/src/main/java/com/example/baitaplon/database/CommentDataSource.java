@@ -163,7 +163,7 @@ public class CommentDataSource {
 
         String[] columns = {"SUM(max_danh_gia) AS total_max_danh_gia"};
 
-        Cursor cursor = database.rawQuery("SELECT SUM(max_danh_gia) AS total_max_danh_gia\n" + "FROM (\n" + "    SELECT MAX(danhgia) AS max_danh_gia\n" + "    FROM Comment\n" + "    WHERE id_quan=?\n" + "    GROUP BY id_user\n" + ") AS max_danh_gia_table", new String[]{String.valueOf(id_quan)});
+        Cursor cursor = database. rawQuery("SELECT SUM(max_danh_gia) AS total_max_danh_gia\n" + "FROM (\n" + "    SELECT MAX(danhgia) AS max_danh_gia\n" + "    FROM Comment\n" + "    WHERE id_quan=?\n" + "    GROUP BY id_user\n" + ") AS max_danh_gia_table", new String[]{String.valueOf(id_quan)});
 
         if (cursor != null && cursor.moveToFirst()) {
             totalMaxDanhGia = cursor.getDouble(cursor.getColumnIndex("total_max_danh_gia"));

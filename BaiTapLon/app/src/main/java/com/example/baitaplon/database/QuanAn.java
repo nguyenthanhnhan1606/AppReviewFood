@@ -81,14 +81,13 @@ public class QuanAn {
 
     @Override
     public String toString() {
-        return "QuanAn{" +
-                "id=" + id +
-                ", tenquan='" + tenquan + '\'' +
-                ", diadiem='" + diadiem + '\'' +
-                ", danhgia=" + danhgia +
-                ", hinhanh='" + hinhanh + '\'' +
-                ", active=" + active +
-                ", id_loai=" + id_loai +
-                '}';
+        return "ID: "+ id + "\n" +
+                "Tên quán: "+ tenquan + "\n" +
+                "Địa điểm: "+ diadiem + "\n" +
+                "Đánh giá: "+ danhgia + "\n" +
+                "Hình ảnh: "+ hinhanh + "\n" +
+                "Active: "+ active + "\n" +
+                "ID Loai: "+ id_loai + "\n" +
+                "Active: "+ active;
     }
 }

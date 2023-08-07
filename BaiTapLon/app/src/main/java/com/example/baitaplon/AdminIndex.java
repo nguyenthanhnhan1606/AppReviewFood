@@ -17,10 +17,6 @@ import com.example.baitaplon.databinding.ActivityIndexBinding;
 
 public class AdminIndex extends AppCompatActivity {
     UserDataSource userDAO;
-    UserAdapter userAdapter;
-    ActivityIndexBinding binding ;
-    Button btnAdd, loginBtn, btnGroup;
-    ListView lvUser;
     Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +31,7 @@ public class AdminIndex extends AppCompatActivity {
 
         Button btnUser = findViewById(R.id.btnUser);
         Button btnLoaiQuan = findViewById(R.id.btnLoaiQuan);
+        Button btnQuan = findViewById(R.id.btnQuan);
 
         btnUser.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +45,14 @@ public class AdminIndex extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), LoaiQuan.class);
+                startActivity(intent);
+            }
+        });
+
+        btnQuan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), QuanAn.class);
                 startActivity(intent);
             }
         });

@@ -46,6 +46,10 @@
             android:name=".LoaiQuan"
             android:exported="false"
             android:parentActivityName=".AdminIndex"/>
+        <activity
+            android:name=".QuanAn"
+            android:exported="false"
+            android:parentActivityName=".AdminIndex"/>
     </application>
 
 </manifest>

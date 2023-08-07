@@ -50,4 +50,14 @@
         android:backgroundTint="#393636"
         android:text="Danh mục" />
 
+    <Button
+        android:id="@+id/btnQuan"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/btnLoaiQuan"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#393636"
+        android:text="Quán" />
+
 </RelativeLayout>

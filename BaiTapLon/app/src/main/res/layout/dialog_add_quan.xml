@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="Thêm thông tin Quán"
+        android:textColor="#2196F3"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/ed_tenQuan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Nhập tên quán"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/ed_diadiem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:hint="Nhập địa điểm" />
+    <EditText
+        android:id="@+id/ed_danhgia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:hint="Nhập đánh giá"
+        android:inputType="number"/>
+    <EditText
+        android:id="@+id/ed_hinhanh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:hint="Nhập hình ảnh" />
+    <Switch
+        android:id="@+id/sp_active"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:hint="Chọn trạng thái" />
+    <Spinner
+        android:id="@+id/spin_loai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#2196F3"
+        android:text="Thêm" />
+</LinearLayout>
