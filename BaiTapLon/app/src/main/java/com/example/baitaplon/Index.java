@@ -30,6 +30,7 @@ import com.example.baitaplon.database.LoaiQuanDataSource;
 import com.example.baitaplon.database.QuanAn;
 import com.example.baitaplon.database.QuanAnDataSource;
 import com.example.baitaplon.database.SQLiteHelper;
+import com.example.baitaplon.database.UserDataSource;
 import com.example.baitaplon.databinding.ActivityIndexBinding;
 import com.google.android.material.tabs.TabLayout;
 
@@ -47,7 +48,8 @@ public class Index extends AppCompatActivity {
     TextView textView;
     Toolbar toolbar;
     QuanAnAdapter quanAnAdapter;
-
+    UserDataSource userDAO;
+    ArrayList<User> listUser;
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     ViewPageAdapter viewPageAdapter;
@@ -216,6 +218,16 @@ public class Index extends AppCompatActivity {
             startActivity(intent);
             finish();
             Toast.makeText(Index.this, "Đăng xuất thành công", Toast.LENGTH_SHORT).show();
+        }
+        if (id == R.id.action_settings) {
+            userDAO = new UserDataSource(this);
+            userDAO.open();
+            UserAdapter userAdapter = new UserAdapter(userDAO.selectAll(),userDAO);
+            userAdapter.setShouldShowEditText(false);
+            com.example.baitaplon.database.User selectedUser = userDAO.selectOne(id_user_index);
+            userAdapter.showDialogEdit(selectedUser,id_user_index,this);
+
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }

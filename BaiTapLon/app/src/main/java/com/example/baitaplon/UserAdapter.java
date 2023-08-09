@@ -21,7 +21,10 @@ import java.util.ArrayList;
 public class UserAdapter extends BaseAdapter {
     ArrayList<com.example.baitaplon.database.User> listUser;
     UserDataSource userDAO;
-
+    private boolean shouldShowEditText = true;
+    public void setShouldShowEditText(boolean showEditText) {
+        shouldShowEditText = showEditText;
+    }
     public UserAdapter(ArrayList<com.example.baitaplon.database.User> listUser, UserDataSource userDAO) {
         this.listUser = listUser;
         this.userDAO = userDAO;
@@ -144,6 +147,7 @@ public class UserAdapter extends BaseAdapter {
         ed_password.setText(new_obj_user.getPassword());
         EditText ed_email = dialog.findViewById(R.id.ed_email);
         ed_email.setText(new_obj_user.getEmail());
+        EditText ed_avatar = dialog.findViewById(R.id.ed_avatar);
         EditText ed_sdt = dialog.findViewById(R.id.ed_sdt);
         ed_sdt.setText(new_obj_user.getSdt());
         Switch activeu = dialog.findViewById(R.id.sp_active);
@@ -155,8 +159,12 @@ public class UserAdapter extends BaseAdapter {
         else{
             ed_role.setChecked(false);
         }
-
-
+        // Ẩn các field chỉnh user_role khi đăng nhập bên user
+        if (!shouldShowEditText) {
+            activeu.setVisibility(View.GONE);
+            ed_role.setVisibility(View.GONE);
+            ed_avatar.setVisibility(View.GONE);
+        }
 
         Button btnSave = dialog.findViewById(R.id.btnSave);
         btnSave.setOnClickListener(new View.OnClickListener() {
@@ -178,10 +186,16 @@ public class UserAdapter extends BaseAdapter {
                 int res = userDAO.updateRow(objUser);
 
                 if (res > 0) {
-                    listUser.set(index, objUser);
+                    try {
+                        Toast.makeText(context, "Đã sửa ", Toast.LENGTH_SHORT).show();
+                        listUser.set(index, objUser);
+                        notifyDataSetChanged();
+//                        Intent intent = new Intent(context.getApplicationContext(), User.class);
+//                        context.startActivity(intent);
+                    }
+                    catch (Exception ex){
 
-                    notifyDataSetChanged();
-                    Toast.makeText(context, "Đã sửa ", Toast.LENGTH_SHORT).show();
+                    }
 
                 } else
                     Toast.makeText(context, "Không sửa được  " + res, Toast.LENGTH_SHORT).show();
