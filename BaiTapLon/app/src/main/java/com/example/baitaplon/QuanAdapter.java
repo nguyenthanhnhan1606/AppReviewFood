@@ -213,98 +213,98 @@ public class QuanAdapter extends BaseAdapter {
         dialog.show();
     }
 
-//    public void showDialogAdd( Context context){
-//
-////        final Dialog dialog = new Dialog(context);
-//        final Dialog dialog = new Dialog(context,androidx.appcompat.R.style.Theme_AppCompat_Light_Dialog_Alert);
-//
-//
-//        dialog.setContentView(R.layout.dialog_add_quan);
-//        dialog.setTitle("Thêm quán mới");
-//
-//        EditText ed_tenquan = dialog.findViewById(R.id.ed_tenQuan);
-//        EditText ed_diadiem = dialog.findViewById(R.id.ed_diadiem);
-//        EditText ed_danhgia = dialog.findViewById(R.id.ed_danhgia);
-//        ed_danhgia.addTextChangedListener(new TextWatcher() {
-//            @Override
-//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//            }
-//
-//            @Override
-//            public void onTextChanged(CharSequence s, int start, int before, int count) {
-//            }
-//
-//            @Override
-//            public void afterTextChanged(Editable s) {
-//                // Kiểm tra và hạn chế giá trị nhập vào
-//                String input = s.toString();
-//                if (!input.isEmpty()) {
-//                    int value = Integer.parseInt(input);
-//                    if (value > 5) {
-//                        ed_danhgia.setText(String.valueOf(5));
-//                    }
-//                }
-//            }
-//        });
-//        EditText ed_hinhanh = dialog.findViewById(R.id.ed_hinhanh);
-//
-//        // làm spinner chọn
-//        final Spinner spin_loai = dialog.findViewById(R.id.spin_loai);
-//
-//        LoaiQuanDataSource loaiQuanDAO = new LoaiQuanDataSource(context);
-//        loaiQuanDAO.open();
-//
-//        SpinLoaiQuanAnAdapter adapter = new SpinLoaiQuanAnAdapter( loaiQuanDAO.getAllLoai() );
-//        spin_loai.setAdapter(adapter);
-//        //======
-//
-//        Button btnSave = dialog.findViewById(R.id.btnSave);
-//        btnSave.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                // viết lệnh update dữ liệu
-//                QuanAn objQuan = new QuanAn();
-//                String ten = ed_tenquan.getText().toString();
-//                String diadiem = ed_diadiem.getText().toString();
-//                String danhgiaText = ed_danhgia.getText().toString().trim();
+    public void showDialogAdd( Context context){
+
+//        final Dialog dialog = new Dialog(context);
+        final Dialog dialog = new Dialog(context,androidx.appcompat.R.style.Theme_AppCompat_Light_Dialog_Alert);
+
+
+        dialog.setContentView(R.layout.dialog_add_quan);
+        dialog.setTitle("Thêm quán mới");
+
+        EditText ed_tenquan = dialog.findViewById(R.id.ed_tenQuan);
+        EditText ed_diadiem = dialog.findViewById(R.id.ed_diadiem);
+        EditText ed_danhgia = dialog.findViewById(R.id.ed_danhgia);
+        ed_danhgia.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // Kiểm tra và hạn chế giá trị nhập vào
+                String input = s.toString();
+                if (!input.isEmpty()) {
+                    int value = Integer.parseInt(input);
+                    if (value > 5) {
+                        ed_danhgia.setText(String.valueOf(5));
+                    }
+                }
+            }
+        });
+        EditText ed_hinhanh = dialog.findViewById(R.id.ed_hinhanh);
+
+        // làm spinner chọn
+        final Spinner spin_loai = dialog.findViewById(R.id.spin_loai);
+
+        LoaiQuanDataSource loaiQuanDAO = new LoaiQuanDataSource(context);
+        loaiQuanDAO.open();
+
+        SpinLoaiQuanAnAdapter adapter = new SpinLoaiQuanAnAdapter( loaiQuanDAO.getAllLoai() );
+        spin_loai.setAdapter(adapter);
+        //======
+
+        Button btnSave = dialog.findViewById(R.id.btnSave);
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // viết lệnh update dữ liệu
+                QuanAn objQuan = new QuanAn();
+                String ten = ed_tenquan.getText().toString();
+                String diadiem = ed_diadiem.getText().toString();
+                String danhgiaText = ed_danhgia.getText().toString().trim();
 //                String hinhanhText = ed_hinhanh.getText().toString().trim();
-//                Double danhgia = Double.valueOf(5);
-//                Integer hinhanh = 0;
-//                if (!danhgiaText.isEmpty()) {
-//                     danhgia = Double.parseDouble(danhgiaText);
-//                }
+                Double danhgia = Double.valueOf(5);
+                Integer hinhanh = 2131165356;
+                if (!danhgiaText.isEmpty()) {
+                     danhgia = Double.parseDouble(danhgiaText);
+                }
 //                if (!hinhanhText.isEmpty()) {
 //                     hinhanh = Integer.parseInt(hinhanhText);
 //                }
-//                // lấy id spin
-//                LoaiQuan objLoaiQuan =  (LoaiQuan)spin_loai.getSelectedItem();
-//
-//                int loaiQuanId = 1;
-//                if (objLoaiQuan != null) {
-//                    loaiQuanId = objLoaiQuan.getId();
-//                }
-//
-//                if (quanDAO.checkNameQuan(ten) == false) {
-//                    try {
-//                        quanDAO.insertQuanAn(ten, diadiem, danhgia, hinhanh, true, loaiQuanId);
-//
-//                    } catch (NullPointerException ex) {
-//                        quanDAO.insertQuanAn(ten, diadiem, 5, 0, true, loaiQuanId);
-//                    }
-//                    listQuan.clear();
-//                    listQuan.addAll(quanDAO.getAllQuan());
-//                    notifyDataSetChanged();
-//                    Toast.makeText(context, "Đã thêm mới ", Toast.LENGTH_SHORT).show();
-//                    Intent intent = new Intent(context.getApplicationContext(), com.example.baitaplon.QuanAn.class);
-//                    context.startActivity(intent);
-//                    dialog.dismiss();
-//                }
-//                else {
-//                    Toast.makeText(context, "Tên bị trùng, đăt lại !!  ", Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
-//        dialog.show();
-//
-//    }
+                // lấy id spin
+                LoaiQuan objLoaiQuan =  (LoaiQuan)spin_loai.getSelectedItem();
+
+                int loaiQuanId = 1;
+                if (objLoaiQuan != null) {
+                    loaiQuanId = objLoaiQuan.getId();
+                }
+
+                if (quanDAO.checkNameQuan(ten) == false) {
+                    try {
+                        quanDAO.insertQuanAn(ten, diadiem, danhgia, hinhanh, true, loaiQuanId);
+
+                    } catch (NullPointerException ex) {
+                        quanDAO.insertQuanAn(ten, diadiem, 5, 0, true, loaiQuanId);
+                    }
+                    listQuan.clear();
+                    listQuan.addAll(quanDAO.getAllQuan());
+                    notifyDataSetChanged();
+                    Toast.makeText(context, "Đã thêm mới ", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(context.getApplicationContext(), com.example.baitaplon.QuanAn.class);
+                    context.startActivity(intent);
+                    dialog.dismiss();
+                }
+                else {
+                    Toast.makeText(context, "Tên bị trùng, đăt lại !!  ", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        dialog.show();
+
+    }
 }

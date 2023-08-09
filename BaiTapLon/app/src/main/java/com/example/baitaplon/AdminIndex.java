@@ -32,6 +32,8 @@ public class AdminIndex extends AppCompatActivity {
         Button btnUser = findViewById(R.id.btnUser);
         Button btnLoaiQuan = findViewById(R.id.btnLoaiQuan);
         Button btnQuan = findViewById(R.id.btnQuan);
+        Button btnComment = findViewById(R.id.btnComment);
+        Button btnThongKe = findViewById(R.id.btnThongKe);
 
         btnUser.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +55,21 @@ public class AdminIndex extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), QuanAn.class);
+                startActivity(intent);
+            }
+        });
+        btnComment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Comment.class);
+                startActivity(intent);
+            }
+        });
+
+        btnThongKe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ThongKe.class);
                 startActivity(intent);
             }
         });

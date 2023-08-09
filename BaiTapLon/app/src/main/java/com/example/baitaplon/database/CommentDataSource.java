@@ -218,5 +218,94 @@ public class CommentDataSource {
         return quanAn;
     }
 
+    public int deleteRow(Comment objComment){
+
+        int res = database.delete(SQLiteHelper.TABLE_COMMENT, "id = ?" , new String[] { objComment.getId() +"" });
+
+        return  res;
+    }
+
+    public Comment selectOne(int id){
+        Comment objComment = new Comment();
+        String[] columns = new String[]{"*"};
+        String selection = SQLiteHelper.COLUMN_IDC + " = ?";
+        String[] selectionArgs = new String[]{String.valueOf(id)};
+
+        Cursor c = database.query(
+                SQLiteHelper.TABLE_COMMENT,
+                columns,
+                selection,
+                selectionArgs,
+                null, null, null
+        );
+
+        if(c != null & c.moveToFirst()) {
+            int activeInt = c.getInt(4);
+            boolean isActive = (activeInt == 1);
+            objComment.setId(c.getInt(0));
+            objComment.setNoidung(c.getString(1));
+            objComment.setDanhgia(c.getDouble(2));
+            objComment.setNgaydang(c.getString(3));
+            objComment.setActive(isActive);
+            objComment.setId_user(c.getInt(5));
+            objComment.setId_qan(c.getInt(6));
+        }
+
+        return objComment; // nếu không lấy được dữ liệu thì cũng trả về object rỗng
+    }
+
+    public ArrayList<Comment> selectAll(){
+        //1. Tạo biến chứa danh sach
+        ArrayList<Comment> listComment = new ArrayList<Comment>();
+        String[] ds_cot = new String[] { "*" };
+        // tạo đối tượng con trỏ đọc dữ liệu
+        Cursor cursor = database.query(SQLiteHelper.TABLE_COMMENT, ds_cot,null, null,null,null, null);
+        if(cursor.moveToFirst()){
+            // có dữ liệu
+            while (!cursor.isAfterLast()){
+                // lấy dữ liệu
+                Comment objComment = new Comment();
+                objComment.setId( cursor.getInt(0)   );
+
+                objComment.setNoidung( cursor.getString(1   ));
+                objComment.setDanhgia( cursor.getDouble(2   ));
+                objComment.setNgaydang( cursor.getString(3   ));
+                objComment.setId_user( cursor.getInt(5));
+                objComment.setId_qan( cursor.getInt(6));
+                // bỏ đối tượng vào danh sách
+                listComment.add(objComment);
+
+                // chuyển con trỏ sang dòng tiếp theo
+                cursor.moveToNext();// nếu không có dòng này sẽ bị treo ứng dụng
+            }
+        }
+        return  listComment;
+    }
+    public int getCommentCountForRestaurant(int restaurantId) {
+        String query = "SELECT COUNT(*) FROM " + SQLiteHelper.TABLE_COMMENT +
+                " WHERE " + SQLiteHelper.COLUMN_IDQUAN + " = ?";
+
+        Cursor cursor = database.rawQuery(query, new String[]{String.valueOf(restaurantId)});
+        if (cursor != null && cursor.moveToFirst()) {
+            int commentCount = cursor.getInt(0);
+            cursor.close();
+            return commentCount;
+        }
+        return 0;
+    }
+
+    public int getRatingCountForRestaurant(int restaurantId) {
+        String query = "SELECT COUNT(*) FROM " + SQLiteHelper.TABLE_COMMENT +
+                " WHERE " + SQLiteHelper.COLUMN_IDQUAN + " = ? AND " +
+                SQLiteHelper.COLUMN_DANHGIA_CM + " > 0";
+
+        Cursor cursor = database.rawQuery(query, new String[]{String.valueOf(restaurantId)});
+        if (cursor != null && cursor.moveToFirst()) {
+            int ratingCount = cursor.getInt(0);
+            cursor.close();
+            return ratingCount;
+        }
+        return 0;
+    }
 
 }

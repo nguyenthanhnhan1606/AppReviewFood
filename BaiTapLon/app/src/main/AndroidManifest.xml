@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BaiTapLon"
         tools:targetApi="31">
+
         <activity
             android:name=".Details"
             android:exported="false"
@@ -27,12 +28,11 @@
         </activity>
         <activity
             android:name=".AdminIndex"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".User"
             android:exported="false"
-            android:parentActivityName=".AdminIndex"/>
+            android:parentActivityName=".AdminIndex" />
         <activity
             android:name=".Index"
             android:exported="false" />
@@ -45,9 +45,17 @@
         <activity
             android:name=".LoaiQuan"
             android:exported="false"
-            android:parentActivityName=".AdminIndex"/>
+            android:parentActivityName=".AdminIndex" />
         <activity
             android:name=".QuanAn"
+            android:exported="false"
+            android:parentActivityName=".AdminIndex" />
+        <activity
+            android:name=".Comment"
+            android:exported="false"
+            android:parentActivityName=".AdminIndex" />
+        <activity
+            android:name=".ThongKe"
             android:exported="false"
             android:parentActivityName=".AdminIndex"/>
     </application>

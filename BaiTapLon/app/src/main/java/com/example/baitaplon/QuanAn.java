@@ -49,11 +49,11 @@ public class QuanAn extends AppCompatActivity {
 
         lvQuan.setAdapter(quanAdapter);
 
-//        btnAdd.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                quanAdapter.showDialogAdd(QuanAn.this);
-//            }
-//        });
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                quanAdapter.showDialogAdd(QuanAn.this);
+            }
+        });
     }
 }
