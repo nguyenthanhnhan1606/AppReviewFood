@@ -41,6 +41,13 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.example.baitaplon.AdminIndex"
+            android:exported="false" />
+        <activity
+            android:name="com.example.baitaplon.User"
+            android:exported="false"
+            android:parentActivityName="com.example.baitaplon.AdminIndex" />
+        <activity
             android:name="com.example.baitaplon.Index"
             android:exported="false" />
         <activity
@@ -49,6 +56,10 @@
         <activity
             android:name="com.example.baitaplon.Login"
             android:exported="false" />
+        <activity
+            android:name="com.example.baitaplon.LoaiQuan"
+            android:exported="false"
+            android:parentActivityName="com.example.baitaplon.AdminIndex" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

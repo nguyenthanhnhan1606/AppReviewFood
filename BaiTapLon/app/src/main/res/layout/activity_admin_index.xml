@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="false"
+    android:layout_centerHorizontal="false"
+    android:layout_centerVertical="false"
+    android:backgroundTint="#332E2E"
+    tools:context=".Index">
+
+    <RelativeLayout
+        android:id="@+id/reLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        tools:ignore="InvalidId">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toobar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DA4141"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="Trang quản trị"
+            app:titleMarginStart="30dp"
+            app:titleTextColor="@color/black" />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnUser"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/reLayout"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#393636"
+        android:text="Người dùng" />
+
+    <Button
+        android:id="@+id/btnLoaiQuan"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/btnUser"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#393636"
+        android:text="Danh mục" />
+
+    <Button
+        android:id="@+id/btnQuan"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/btnLoaiQuan"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#393636"
+        android:text="Quán" />
+    <Button
+        android:id="@+id/btnComment"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/btnQuan"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#393636"
+        android:text="Comment" />
+    <Button
+        android:id="@+id/btnThongKe"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/btnComment"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#393636"
+        android:text="Thống kê" />
+</RelativeLayout>

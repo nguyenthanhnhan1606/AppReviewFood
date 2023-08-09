@@ -2,9 +2,7 @@ package com.example.baitaplon;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -70,14 +68,18 @@ public class Login extends AppCompatActivity {
                 if (username.equals("") || password.equals("")){
                     Toast.makeText(getApplicationContext(),"Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                 }else{
-                    boolean checkLogin = userDataSource.checkLogin(username, password);
-                    if (checkLogin == true){
+                    String checkLogin = userDataSource.checkLogin(username, password);
+                    if (username != null && checkLogin.equalsIgnoreCase("user")){
                         Toast.makeText(getApplicationContext(),"Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                         int id=userDataSource.getIdUser(username,password);
                         Intent intent = new Intent(getApplicationContext(), Index.class);
                         intent.putExtra(INTENT_ID_USER, id);
                         startActivity(intent);
-                    }else{
+                    } else if (username != null && checkLogin.equalsIgnoreCase("admin")) {
+                        Toast.makeText(getApplicationContext(),"Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), AdminIndex.class);
+                        startActivity(intent);
+                    } else{
                         Toast.makeText(getApplicationContext(),"Đăng nhập thất bại", Toast.LENGTH_SHORT).show();
                     }
                 }

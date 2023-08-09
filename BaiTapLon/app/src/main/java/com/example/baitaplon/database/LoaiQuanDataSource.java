@@ -7,7 +7,6 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class LoaiQuanDataSource {
     private SQLiteDatabase database;
@@ -58,4 +57,49 @@ public class LoaiQuanDataSource {
         return loaiQuan;
     }
 
+    public int deleteRow(LoaiQuan objLoaiQuan){
+
+        int res = database.delete(SQLiteHelper.TABLE_LOAIQUAN, "id = ?" , new String[] { objLoaiQuan.getId() +"" });
+
+        return  res;
+    }
+
+    public int updateRow(LoaiQuan objLoaiQuan){
+        ContentValues values = new ContentValues();
+        values.put(SQLiteHelper.COLUMN_IDLQ, objLoaiQuan.getId());
+        values.put(SQLiteHelper.COLUMN_TENLOAI, objLoaiQuan.getTenloai());
+
+        int res = database.update(SQLiteHelper.TABLE_LOAIQUAN, values,"id = ?", new String[] { objLoaiQuan.getId() +"" } );
+        return  res;
+    }
+
+    public LoaiQuan selectOne(int id){
+        LoaiQuan objLoaiQuan = new LoaiQuan();
+        String[] columns = new String[]{"*"};
+        String selection = SQLiteHelper.COLUMN_IDLQ + " = ?";
+        String[] selectionArgs = new String[]{String.valueOf(id)};
+
+        Cursor c = database.query(
+                SQLiteHelper.TABLE_LOAIQUAN,
+                columns,
+                selection,
+                selectionArgs,
+                null, null, null
+        );
+
+        if(c != null & c.moveToFirst()) {
+            objLoaiQuan.setId(c.getInt(0));
+            objLoaiQuan.setTenloai(c.getString(1));
+
+        }
+        return objLoaiQuan; // nếu không lấy được dữ liệu thì cũng trả về object rỗng
+    }
+
+    public boolean checkTenLoaiQuan (String tenLoaiQuan){
+        Cursor cursor = database.rawQuery("select * from LoaiQuan where tenloai = ?", new String[]{tenLoaiQuan});
+        if (cursor.getCount() > 0)
+            return true;
+        else
+            return false;
+    }
 }

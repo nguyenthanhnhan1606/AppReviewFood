@@ -6,109 +6,131 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="26"
-8-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml
+8-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="33" />
-9-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml
+9-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml
 10
 11    <permission
-11-->[androidx.core:core:1.9.0] C:\Users\WIN10\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+11-->[androidx.core:core:1.9.0] C:\Users\Admin\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
 12        android:name="com.example.baitaplon.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-12-->[androidx.core:core:1.9.0] C:\Users\WIN10\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+12-->[androidx.core:core:1.9.0] C:\Users\Admin\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
 13        android:protectionLevel="signature" />
-13-->[androidx.core:core:1.9.0] C:\Users\WIN10\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+13-->[androidx.core:core:1.9.0] C:\Users\Admin\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
 14
 15    <uses-permission android:name="com.example.baitaplon.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-15-->[androidx.core:core:1.9.0] C:\Users\WIN10\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-15-->[androidx.core:core:1.9.0] C:\Users\WIN10\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+15-->[androidx.core:core:1.9.0] C:\Users\Admin\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+15-->[androidx.core:core:1.9.0] C:\Users\Admin\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 16
 17    <application
-17-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:5:5-37:19
+17-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:5:5-49:19
 18        android:allowBackup="true"
-18-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:6:9-35
+18-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:6:9-35
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.9.0] C:\Users\WIN10\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+19-->[androidx.core:core:1.9.0] C:\Users\Admin\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 20        android:dataExtractionRules="@xml/data_extraction_rules"
-20-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:7:9-65
+20-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:7:9-65
 21        android:debuggable="true"
 22        android:extractNativeLibs="false"
 23        android:fullBackupContent="@xml/backup_rules"
-23-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:8:9-54
+23-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:8:9-54
 24        android:icon="@mipmap/ic_launcher"
-24-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:9:9-43
+24-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:9:9-43
 25        android:label="@string/app_name"
-25-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:10:9-41
+25-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:10:9-41
 26        android:roundIcon="@mipmap/ic_launcher_round"
-26-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:11:9-54
+26-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:11:9-54
 27        android:supportsRtl="true"
-27-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:12:9-35
+27-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:12:9-35
 28        android:testOnly="true"
 29        android:theme="@style/Theme.BaiTapLon" >
-29-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:13:9-47
+29-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:13:9-47
 30        <activity
-30-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:15:9-18:50
+30-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:15:9-18:51
 31            android:name="com.example.baitaplon.Details"
-31-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:16:13-36
+31-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:16:13-36
 32            android:exported="false"
-32-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:17:13-37
+32-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:17:13-37
 33            android:parentActivityName="com.example.baitaplon.Index" />
-33-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:18:13-48
+33-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:18:13-48
 34        <activity
-34-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:19:9-27:20
+34-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:19:9-27:20
 35            android:name="com.example.baitaplon.Splash"
-35-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:20:13-35
+35-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:20:13-35
 36            android:exported="true" >
-36-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:21:13-36
+36-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:21:13-36
 37            <intent-filter>
-37-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:22:13-26:29
+37-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:22:13-26:29
 38                <action android:name="android.intent.action.MAIN" />
-38-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:23:17-69
-38-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:23:25-66
+38-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:23:17-69
+38-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:23:25-66
 39
 40                <category android:name="android.intent.category.LAUNCHER" />
-40-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:25:17-77
-40-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:25:27-74
+40-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:25:17-77
+40-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:25:27-74
 41            </intent-filter>
 42        </activity>
 43        <activity
-43-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:28:9-30:40
-44            android:name="com.example.baitaplon.Index"
-44-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:29:13-34
+43-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:28:9-30:39
+44            android:name="com.example.baitaplon.AdminIndex"
+44-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:29:13-39
 45            android:exported="false" />
-45-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:30:13-37
+45-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:30:13-37
 46        <activity
-46-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:31:9-33:40
-47            android:name="com.example.baitaplon.Register"
-47-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:32:13-37
-48            android:exported="false" />
-48-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:33:13-37
-49        <activity
-49-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:34:9-36:49
-50            android:name="com.example.baitaplon.Login"
-50-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:35:13-34
-51            android:exported="false" />
-51-->D:\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:36:13-37
-52
-53        <provider
-53-->[androidx.emoji2:emoji2:1.2.0] C:\Users\WIN10\.gradle\caches\transforms-3\58734ab3db9d01442ffac75a0ea2bc68\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-54            android:name="androidx.startup.InitializationProvider"
-54-->[androidx.emoji2:emoji2:1.2.0] C:\Users\WIN10\.gradle\caches\transforms-3\58734ab3db9d01442ffac75a0ea2bc68\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-55            android:authorities="com.example.baitaplon.androidx-startup"
-55-->[androidx.emoji2:emoji2:1.2.0] C:\Users\WIN10\.gradle\caches\transforms-3\58734ab3db9d01442ffac75a0ea2bc68\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-56            android:exported="false" >
-56-->[androidx.emoji2:emoji2:1.2.0] C:\Users\WIN10\.gradle\caches\transforms-3\58734ab3db9d01442ffac75a0ea2bc68\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-57            <meta-data
-57-->[androidx.emoji2:emoji2:1.2.0] C:\Users\WIN10\.gradle\caches\transforms-3\58734ab3db9d01442ffac75a0ea2bc68\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-58                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\WIN10\.gradle\caches\transforms-3\58734ab3db9d01442ffac75a0ea2bc68\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-59                android:value="androidx.startup" />
-59-->[androidx.emoji2:emoji2:1.2.0] C:\Users\WIN10\.gradle\caches\transforms-3\58734ab3db9d01442ffac75a0ea2bc68\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-60            <meta-data
-60-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\WIN10\.gradle\caches\transforms-3\75d35fda4271de3dc184847093d1a2b0\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-61                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-61-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\WIN10\.gradle\caches\transforms-3\75d35fda4271de3dc184847093d1a2b0\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-62                android:value="androidx.startup" />
-62-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\WIN10\.gradle\caches\transforms-3\75d35fda4271de3dc184847093d1a2b0\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-63        </provider>
-64    </application>
-65
-66</manifest>
+46-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:32:9-35:55
+47            android:name="com.example.baitaplon.User"
+47-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:33:13-33
+48            android:exported="false"
+48-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:34:13-37
+49            android:parentActivityName="com.example.baitaplon.AdminIndex" />
+49-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:35:13-53
+50        <activity
+50-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:36:9-38:40
+51            android:name="com.example.baitaplon.Index"
+51-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:37:13-34
+52            android:exported="false" />
+52-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:38:13-37
+53        <activity
+53-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:39:9-41:40
+54            android:name="com.example.baitaplon.Register"
+54-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:40:13-37
+55            android:exported="false" />
+55-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:41:13-37
+56        <activity
+56-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:42:9-44:40
+57            android:name="com.example.baitaplon.Login"
+57-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:43:13-34
+58            android:exported="false" />
+58-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:44:13-37
+59        <activity
+59-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:45:9-48:55
+60            android:name="com.example.baitaplon.LoaiQuan"
+60-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:46:13-37
+61            android:exported="false"
+61-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:47:13-37
+62            android:parentActivityName="com.example.baitaplon.AdminIndex" />
+62-->C:\Users\Admin\Desktop\AppReviewFood\BaiTapLon\app\src\main\AndroidManifest.xml:48:13-53
+63
+64        <provider
+64-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Admin\.gradle\caches\transforms-3\58734ab3db9d01442ffac75a0ea2bc68\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+65            android:name="androidx.startup.InitializationProvider"
+65-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Admin\.gradle\caches\transforms-3\58734ab3db9d01442ffac75a0ea2bc68\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+66            android:authorities="com.example.baitaplon.androidx-startup"
+66-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Admin\.gradle\caches\transforms-3\58734ab3db9d01442ffac75a0ea2bc68\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+67            android:exported="false" >
+67-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Admin\.gradle\caches\transforms-3\58734ab3db9d01442ffac75a0ea2bc68\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+68            <meta-data
+68-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Admin\.gradle\caches\transforms-3\58734ab3db9d01442ffac75a0ea2bc68\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+69                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+69-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Admin\.gradle\caches\transforms-3\58734ab3db9d01442ffac75a0ea2bc68\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+70                android:value="androidx.startup" />
+70-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Admin\.gradle\caches\transforms-3\58734ab3db9d01442ffac75a0ea2bc68\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+71            <meta-data
+71-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Admin\.gradle\caches\transforms-3\75d35fda4271de3dc184847093d1a2b0\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+72                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+72-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Admin\.gradle\caches\transforms-3\75d35fda4271de3dc184847093d1a2b0\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+73                android:value="androidx.startup" />
+73-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Admin\.gradle\caches\transforms-3\75d35fda4271de3dc184847093d1a2b0\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+74        </provider>
+75    </application>
+76
+77</manifest>
