@@ -59,13 +59,6 @@
         android:layout_margin="10dp"
         android:padding="10dp"
         android:hint="Nhập Avatar" />
-    <EditText
-        android:id="@+id/ed_role"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:padding="10dp"
-        android:hint="Nhập role" />
 
     <Button
         android:id="@+id/btnSave"

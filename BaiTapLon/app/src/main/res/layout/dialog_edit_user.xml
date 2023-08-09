@@ -59,13 +59,13 @@
         android:layout_margin="10dp"
         android:padding="10dp"
         android:hint="Nhập Avatar" />
-    <EditText
+    <CheckBox
         android:id="@+id/ed_role"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:padding="10dp"
-        android:hint="Nhập role" />
+        android:text="Admin" />
     <Switch
         android:id="@+id/sp_active"
         android:layout_width="match_parent"

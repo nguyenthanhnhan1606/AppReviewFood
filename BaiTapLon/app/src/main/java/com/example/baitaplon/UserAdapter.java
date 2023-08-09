@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -147,8 +148,15 @@ public class UserAdapter extends BaseAdapter {
         ed_sdt.setText(new_obj_user.getSdt());
         Switch activeu = dialog.findViewById(R.id.sp_active);
         activeu.setChecked(new_obj_user.isActive());
-        EditText ed_role = dialog.findViewById(R.id.ed_role);
-        ed_role.setText(new_obj_user.getUser_role());
+        CheckBox ed_role = dialog.findViewById(R.id.ed_role);
+        if(new_obj_user.getUser_role().equalsIgnoreCase("admin")) {
+            ed_role.setChecked(true);
+        }
+        else{
+            ed_role.setChecked(false);
+        }
+
+
 
         Button btnSave = dialog.findViewById(R.id.btnSave);
         btnSave.setOnClickListener(new View.OnClickListener() {
@@ -160,7 +168,12 @@ public class UserAdapter extends BaseAdapter {
                 objUser.setEmail(ed_email.getText().toString());
                 objUser.setHoten(ed_fullname.getText().toString());
                 objUser.setSdt(ed_sdt.getText().toString());
-                objUser.setUser_role(ed_role.getText().toString());
+                if(ed_role.isChecked()){
+                    objUser.setUser_role("admin");
+                }
+                else{
+                    objUser.setUser_role("user");
+                }
                 objUser.setActive(activeu.getShowText());
                 int res = userDAO.updateRow(objUser);
 
@@ -194,7 +207,6 @@ public class UserAdapter extends BaseAdapter {
         EditText ed_email = dialog.findViewById(R.id.ed_email);
         EditText ed_fullname = dialog.findViewById(R.id.ed_hoten);
         EditText ed_sdt = dialog.findViewById(R.id.ed_sdt);
-        EditText ed_rolel = dialog.findViewById(R.id.ed_role);
         EditText ed_avatar = dialog.findViewById(R.id.ed_avatar);
 
         Button btnSave = dialog.findViewById(R.id.btnSave);
@@ -209,9 +221,8 @@ public class UserAdapter extends BaseAdapter {
                 String email = ed_email.getText().toString();
                 String sdt = ed_sdt.getText().toString();
                 String avatar = ed_avatar.getText().toString();
-                String user_role = ed_rolel.getText().toString();
                 if (userDAO.checkUserName(hoten) == false) {
-                    boolean res = userDAO.insertUser(hoten,username,password,email,sdt,avatar,true,user_role);
+                    boolean res = userDAO.insertUser(hoten,username,password,email,sdt,avatar,true,"user");
                     if (res) {
                         Toast.makeText(context, "Không thêm được  ", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(context.getApplicationContext(), User.class);
